@@ -9,7 +9,6 @@ DEBUG = os.getenv("DEBUG")
 
 ALLOWED_HOSTS = ["*"]
 
-
 INSTALLED_APPS = [
     'jazzmin',
     'django.contrib.admin',
@@ -51,7 +50,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -74,7 +72,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'Asia/Tashkent'
@@ -84,6 +81,7 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -117,7 +115,7 @@ JAZZMIN_SETTINGS = {
     "show_ui_builder": True,
     "topmenu_links": [
         {"name": "Home", "url": "admin:index",
-            "permissions": ["auth.view_user"]},
+         "permissions": ["auth.view_user"]},
 
         {"name": "Support", "url": "https://t.me/Rozievich", "new_window": True},
 
