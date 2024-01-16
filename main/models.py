@@ -55,6 +55,7 @@ class Product(models.Model):
     types = models.PositiveIntegerField(choices=RateChoice.choices, default=RateChoice.KG)
     size = models.PositiveIntegerField()
     color = models.ManyToManyField(Color, related_query_name="product")
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, blank=True, null=True)
     created_at = models.DateTimeField(auto_now=True)
 
     class Meta:
