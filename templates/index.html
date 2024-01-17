@@ -64,7 +64,7 @@
                                 <nav class="main-nav">
                                     <ul>
                                         <li class="dropdown-holder active"><a href="index.html">Bosh Sahifa</a>
-                                        </li>
+                                        </li> 
                                         <li class="megamenu-holder "><a href="shop-left-sidebar.html">Maxsulotlar</a></li>
                                         <li class=""><a href="about-us.html">Biz Haqimizda</a></li>
                                         <li class=""><a href="contact.html">Bog'lanish</a></li>
@@ -167,14 +167,10 @@
                                 </div>
                                 <div id="cate-toggle" class="category-menu-list">
                                     <ul>
-                                        <li class="right-menu"><a href="shop-left-sidebar.html">Plyokalar</a>
+                                        {% for category in categories %}
+                                        <li class="right-menu"><a href="shop-left-sidebar.html">{{category.name}}</a>
                                         </li>
-                                        <li class="right-menu"><a href="shop-left-sidebar.html">Lentalar</a>
-                                        </li>
-                                        <li class="right-menu"><a href="shop-left-sidebar.html">Qisqichlar</a>
-                                        </li>
-                                        <li class="right-menu"><a href="shop-left-sidebar.html">Ip</a>
-                                        </li>
+                                        {% endfor %}
                                     </ul>
                                 </div>
                             </div>
@@ -507,90 +503,22 @@
                             {"breakpoint":768, "settings": {"slidesToShow": 2}},
                             {"breakpoint":576, "settings": {"slidesToShow": 1}}
                         ]'>
+                        {% for media in medias %}
                             <div class="slide-item">
                                 <div class="inner-slide">
                                     <div class="blog-img img-hover_effect">
                                         <a href="blog-details-left-sidebar.html">
-                                            <img src="{% static 'images/blog/large-size/1.jpg' %}" alt="Uren's Blog Image">
+                                            <iframe width="320" height="220" src="https://www.youtube.com/embed/{{media.url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                         </a>
-                                        <span class="post-date">12-09-19</span>
+                                        <span class="post-date">{{media.created_at|date}}</span>
                                     </div>
                                     <div class="blog-content">
-                                        <h3><a href="blog-details-left-sidebar.html">Quaerat eligendi dolores autem omnis sed</a></h3>
-                                        <p>Maiores accusamus unde nulla quaerat deserunt, beatae molestias blanditiis aut recusandae saepe, quis, culpa voluptatum?</p>
+                                        <h3><a href="blog-details-left-sidebar.html">{{media.name}}</a></h3>
+                                        <p>{{media.description}}</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="slide-item">
-                                <div class="inner-slide">
-                                    <div class="blog-img img-hover_effect">
-                                        <a href="blog-details-left-sidebar.html">
-                                            <img src="{% static 'images/blog/large-size/2.jpg' %}" alt="Uren's Blog Image">
-                                        </a>
-                                        <span class="post-date">15-09-19</span>
-                                    </div>
-                                    <div class="blog-content">
-                                        <h3><a href="blog-details-left-sidebar.html">Nulla voluptatum maiores dolorem nobis</a></h3>
-                                        <p>Maiores accusamus unde nulla quaerat deserunt, beatae molestias blanditiis aut recusandae saepe, quis, culpa voluptatum?</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slide-item">
-                                <div class="inner-slide">
-                                    <div class="blog-img img-hover_effect">
-                                        <a href="blog-details-left-sidebar.html">
-                                            <img src="{% static 'images/blog/large-size/3.jpg' %}" alt="Uren's Blog Image">
-                                        </a>
-                                        <span class="post-date">19-09-19</span>
-                                    </div>
-                                    <div class="blog-content">
-                                        <h3><a href="blog-details-left-sidebar.html">Laudantium minus excepturi expedita dolore</a></h3>
-                                        <p>Maiores accusamus unde nulla quaerat deserunt, beatae molestias blanditiis aut recusandae saepe, quis, culpa voluptatum?</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slide-item">
-                                <div class="inner-slide">
-                                    <div class="blog-img img-hover_effect">
-                                        <a href="blog-details-left-sidebar.html">
-                                            <img src="{% static 'images/blog/large-size/4.jpg' %}" alt="Uren's Blog Image">
-                                        </a>
-                                        <span class="post-date">16-09-19</span>
-                                    </div>
-                                    <div class="blog-content">
-                                        <h3><a href="blog-details-left-sidebar.html">Aliquam nihil dolorem beatae totam tempora</a></h3>
-                                        <p>Maiores accusamus unde nulla quaerat deserunt, beatae molestias blanditiis aut recusandae saepe, quis, culpa voluptatum?</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slide-item">
-                                <div class="inner-slide">
-                                    <div class="blog-img img-hover_effect">
-                                        <a href="blog-details-left-sidebar.html">
-                                            <img src="{% static 'images/blog/large-size/5.jpg' %}" alt="Uren's Blog Image">
-                                        </a>
-                                        <span class="post-date">20-09-19</span>
-                                    </div>
-                                    <div class="blog-content">
-                                        <h3><a href="blog-details-left-sidebar.html">Reprehenderit illum iusto sit asperiores</a></h3>
-                                        <p>Maiores accusamus unde nulla quaerat deserunt, beatae molestias blanditiis aut recusandae saepe, quis, culpa voluptatum?</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slide-item">
-                                <div class="inner-slide">
-                                    <div class="blog-img img-hover_effect">
-                                        <a href="blog-details-left-sidebar.html">
-                                            <img src="{% static 'images/blog/large-size/6.jpg' %}" alt="Uren's Blog Image">
-                                        </a>
-                                        <span class="post-date">25-09-19</span>
-                                    </div>
-                                    <div class="blog-content">
-                                        <h3><a href="blog-details-left-sidebar.html">Corrupti, dolore tempore totam voluptate</a></h3>
-                                        <p>Maiores accusamus unde nulla quaerat deserunt, beatae molestias blanditiis aut recusandae saepe, quis, culpa voluptatum?</p>
-                                    </div>
-                                </div>
-                            </div>
+                        {% endfor %}
                         </div>
                     </div>
                 </div>
