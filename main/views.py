@@ -47,9 +47,18 @@ def Media_about(request):
     }
     return render(request, 'single-product.html', context)
 
+
 def Search(request):
     context = {
 
     }
 
     return render(request, 'wishlist.html', context)
+
+
+def Error(request):
+    context = {
+
+    }
+
+    return render(request, '404.html', context)
