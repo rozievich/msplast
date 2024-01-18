@@ -508,13 +508,13 @@
                                 <div class="inner-slide">
                                     <div class="blog-img img-hover_effect">
                                         <a href="blog-details-left-sidebar.html">
-                                            <iframe width="320" height="220" src="https://www.youtube.com/embed/{{media.url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                            <iframe width="320" height="220" src="{{media.url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                         </a>
                                         <span class="post-date">{{media.created_at|date}}</span>
                                     </div>
                                     <div class="blog-content">
                                         <h3><a href="blog-details-left-sidebar.html">{{media.name}}</a></h3>
-                                        <p>{{media.description}}</p>
+                                        <p>{{media.description|slice:":100"}}...</p>
                                     </div>
                                 </div>
                             </div>

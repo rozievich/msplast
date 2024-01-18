@@ -300,212 +300,25 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="row blog-item_wrap">
+                            {% for media in medias %}
                             <div class="col-lg-6">
                                 <div class="blog-item">
                                     <div class="blog-img img-hover_effect">
                                         <a href="blog-details-left-sidebar.html">
-                                            <img src="{% static 'images/blog/large-size/1.jpg' %}" alt="Uren's Blog Image">
+                                            <iframe width="620" height="375" src="{{ media.url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                         </a>
-                                        <span class="post-date">12-09-19</span>
+                                        <span class="post-date">{{media.created_at|date}}</span>
                                     </div>
                                     <div class="blog-content">
-                                        <h3><a href="blog-details-left-sidebar.html">Blog Image Post</a></h3>
-                                        <p>Maiores accusamus unde nulla quaerat deserunt, beatae molestias blanditiis aut
-                                            recusandae saepe, quis, culpa voluptatum?</p>
+                                        <h3><a href="blog-details-left-sidebar.html">{{media.name}}</a></h3>
+                                        <p>{{media.description|slice:":100"}}...</p>
                                         <div class="uren-btn-ps_left">
                                             <a class="uren-btn-2" href="blog-details-left-sidebar.html">Read More</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="blog-item">
-                                    <div class="single-blog_slider slider-navigation_style-1">
-                                        <div class="slide-item">
-                                            <div class="inner-slide">
-                                                <div class="blog-img img-hover_effect">
-                                                    <a href="blog-details-left-sidebar.html">
-                                                        <img src="{% static 'images/blog/large-size/3.jpg' %}" alt="Uren's Blog Image">
-                                                    </a>
-                                                    <span class="post-date">19-09-19</span>
-                                                </div>
-                                                <div class="blog-content">
-                                                    <h3><a href="blog-details-left-sidebar.html">Post With Gallery</a></h3>
-                                                    <p>Maiores accusamus unde nulla quaerat deserunt, beatae molestias
-                                                        blanditiis aut recusandae saepe, quis, culpa voluptatum?</p>
-                                                    <div class="uren-btn-ps_left">
-                                                        <a class="uren-btn-2" href="blog-details-left-sidebar.html">Read
-                                                            More</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="slide-item">
-                                            <div class="inner-slide">
-                                                <div class="blog-img img-hover_effect">
-                                                    <a href="blog-details-left-sidebar.html">
-                                                        <img src="{% static 'images/blog/large-size/4.jpg' %}" alt="Uren's Blog Image">
-                                                    </a>
-                                                    <span class="post-date">16-09-19</span>
-                                                </div>
-                                                <div class="blog-content">
-                                                    <h3><a href="blog-details-left-sidebar.html">Post With Gallery</a></h3>
-                                                    <p>Maiores accusamus unde nulla quaerat deserunt, beatae molestias
-                                                        blanditiis aut recusandae saepe, quis, culpa voluptatum?</p>
-                                                    <div class="uren-btn-ps_left">
-                                                        <a class="uren-btn-2" href="blog-details-left-sidebar.html">Read
-                                                            More</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="slide-item">
-                                            <div class="inner-slide">
-                                                <div class="blog-img img-hover_effect">
-                                                    <a href="blog-details-left-sidebar.html">
-                                                        <img src="{% static 'images/blog/large-size/5.jpg' %}" alt="Uren's Blog Image">
-                                                    </a>
-                                                    <span class="post-date">20-09-19</span>
-                                                </div>
-                                                <div class="blog-content">
-                                                    <h3><a href="blog-details-left-sidebar.html">Post With Gallery</a></h3>
-                                                    <p>Maiores accusamus unde nulla quaerat deserunt, beatae molestias
-                                                        blanditiis aut recusandae saepe, quis, culpa voluptatum?</p>
-                                                    <div class="uren-btn-ps_left">
-                                                        <a class="uren-btn-2" href="blog-details-left-sidebar.html">Read
-                                                            More</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="slide-item">
-                                            <div class="inner-slide">
-                                                <div class="blog-img img-hover_effect">
-                                                    <a href="blog-details-left-sidebar.html">
-                                                        <img src="{% static 'images/blog/large-size/6.jpg' %}" alt="Uren's Blog Image">
-                                                    </a>
-                                                    <span class="post-date">25-09-19</span>
-                                                </div>
-                                                <div class="blog-content">
-                                                    <h3><a href="blog-details-left-sidebar.html">Post With Gallery</a></h3>
-                                                    <p>Maiores accusamus unde nulla quaerat deserunt, beatae molestias
-                                                        blanditiis aut recusandae saepe, quis, culpa voluptatum?</p>
-                                                    <div class="uren-btn-ps_left">
-                                                        <a class="uren-btn-2" href="blog-details-left-sidebar.html">Read
-                                                            More</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="blog-item">
-                                    <div class="blog-img img-hover_effect">
-                                        <a href="blog-details-left-sidebar.html">
-                                            <img src="{% static 'images/blog/large-size/3.jpg' %}" alt="Uren's Blog Image">
-                                        </a>
-                                        <span class="post-date">12-09-19</span>
-                                    </div>
-                                    <div class="blog-content">
-                                        <h3><a href="blog-details-left-sidebar.html">Repellat obcaecati deserunt autem molestiae</a></h3>
-                                        <p>Maiores accusamus unde nulla quaerat deserunt, beatae molestias blanditiis aut
-                                            recusandae saepe, quis, culpa voluptatum?</p>
-                                        <div class="uren-btn-ps_left">
-                                            <a class="uren-btn-2" href="blog-details-left-sidebar.html">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="blog-item">
-                                    <div class="blog-img img-hover_effect">
-                                        <a href="blog-details-left-sidebar.html">
-                                            <img src="{% static 'images/blog/large-size/4.jpg' %}" alt="Uren's Blog Image">
-                                        </a>
-                                        <span class="post-date">12-09-19</span>
-                                    </div>
-                                    <div class="blog-content">
-                                        <h3><a href="blog-details-left-sidebar.html">Beatae rerum voluptatum odit minima</a></h3>
-                                        <p>Maiores accusamus unde nulla quaerat deserunt, beatae molestias blanditiis aut
-                                            recusandae saepe, quis, culpa voluptatum?</p>
-                                        <div class="uren-btn-ps_left">
-                                            <a class="uren-btn-2" href="blog-details-left-sidebar.html">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="blog-item">
-                                    <div class="embed-responsive embed-responsive-16by9">
-                                        <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/256180869&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true">
-                                        </iframe>
-                                    </div>
-                                    <div class="blog-content">
-                                        <h3><a href="blog-details-left-sidebar.html">Post With Audio</a></h3>
-                                        <p>Maiores accusamus unde nulla quaerat deserunt, beatae molestias blanditiis aut
-                                            recusandae saepe, quis, culpa voluptatum?</p>
-                                        <div class="uren-btn-ps_left">
-                                            <a class="uren-btn-2" href="blog-details-left-sidebar.html">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="blog-item">
-                                    <div class="embed-responsive embed-responsive-16by9">
-                                        <iframe src="https://www.youtube.com/embed/-lG0kDeuSJk" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                                        </iframe>
-                                    </div>
-                                    <div class="blog-content">
-                                        <h3><a href="blog-details-left-sidebar.html">Post With Video</a></h3>
-                                        <p>Maiores accusamus unde nulla quaerat deserunt, beatae molestias blanditiis aut
-                                            recusandae saepe, quis, culpa voluptatum?</p>
-                                        <div class="uren-btn-ps_left">
-                                            <a class="uren-btn-2" href="blog-details-left-sidebar.html">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="blog-item">
-                                    <div class="blog-img img-hover_effect">
-                                        <a href="blog-details-left-sidebar.html">
-                                            <img src="{% static 'images/blog/large-size/5.jpg' %}" alt="Uren's Blog Image">
-                                        </a>
-                                        <span class="post-date">12-09-19</span>
-                                    </div>
-                                    <div class="blog-content">
-                                        <h3><a href="blog-details-left-sidebar.html">Quaerat eligendi dolores autem omnis
-                                                sed</a></h3>
-                                        <p>Maiores accusamus unde nulla quaerat deserunt, beatae molestias blanditiis aut
-                                            recusandae saepe, quis, culpa voluptatum?</p>
-                                        <div class="uren-btn-ps_left">
-                                            <a class="uren-btn-2" href="blog-details-left-sidebar.html">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="blog-item">
-                                    <div class="blog-img img-hover_effect">
-                                        <a href="blog-details-left-sidebar.html">
-                                            <img src="{% static 'images/blog/large-size/6.jpg' %}" alt="Uren's Blog Image">
-                                        </a>
-                                        <span class="post-date">12-09-19</span>
-                                    </div>
-                                    <div class="blog-content">
-                                        <h3><a href="blog-details-left-sidebar.html">Quaerat eligendi dolores autem omnis
-                                                sed</a></h3>
-                                        <p>Maiores accusamus unde nulla quaerat deserunt, beatae molestias blanditiis aut
-                                            recusandae saepe, quis, culpa voluptatum?</p>
-                                        <div class="uren-btn-ps_left">
-                                            <a class="uren-btn-2" href="blog-details-left-sidebar.html">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                         <div class="row">
                             <div class="col-lg-12">

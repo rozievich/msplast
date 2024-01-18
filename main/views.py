@@ -1,11 +1,10 @@
 from django.shortcuts import render
 from .models import Product, Category, Media
 
+
 def Home(request):
     categories = Category.objects.all()
     medias = Media.objects.all()
-    for media in medias:
-        media.url = media.url.split("=")[1]
     context = {
         "categories": categories,
         "medias": medias,
@@ -39,10 +38,10 @@ def Contact(request):
 
 
 def Medias(request):
+    medias = Media.objects.all()
     context = {
-
+        "medias": medias,
     }
-
     return render(request, 'blog-2-column.html', context)
 
 def Media_about(request):
