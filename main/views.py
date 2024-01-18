@@ -40,8 +40,16 @@ def Media(request):
 
     return render(request, 'blog-2-column.html', context)
 
+
 def Media_about(request):
     context = {
 
     }
     return render(request, 'single-product.html', context)
+
+def Search(request):
+    context = {
+
+    }
+
+    return render(request, 'wishlist.html', context)
