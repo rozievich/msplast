@@ -176,9 +176,8 @@
                     </div>
                     <div class="custom-search_col col-12">
                         <div class="hm-form_area">
-                            <form action="#" class="hm-searchbox">
-
-                                <input type="text" placeholder="Maxsulot nomini kiriting ...">
+                            <form action="{% url 'media' %}" method="get" class="hm-searchbox">
+                                <input type="text" name="q" placeholder="Media nomini kiriting ...">
                                 <button class="header-search_btn" type="submit"><i
                                         class="ion-ios-search-strong"><span>Qidirmoq</span></i></button>
                             </form>

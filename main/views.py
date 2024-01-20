@@ -30,6 +30,7 @@ def Shop(request):
         products = Product.objects.filter(
             Q(name__contains=key) |
             Q(description__contains=key))
+        
     else:
         products = Product.objects.all()
     categories = Category.objects.all()
@@ -51,12 +52,14 @@ def Contact(request):
 
 def Medias(request):
     categories = Category.objects.all()
-    medias = Media.objects.all()
-    context = {
-        "categories": categories,
-        "medias": medias,
-    }
-    return render(request, 'blog-2-column.html', context)
+    if request.GET:
+        key = request.GET.get('q')
+        medias = Media.objects.filter(
+            Q(name__contains=key) |
+            Q(description__contains=key))
+    else:
+        medias = Media.objects.all()
+    return render(request, 'blog-2-column.html', {"categories": categories, "medias": medias})
 
 
 def Media_about(request):

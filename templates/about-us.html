@@ -172,10 +172,10 @@
                     </div>
                     <div class="custom-search_col col-12">
                         <div class="hm-form_area">
-                            <form action="#" class="hm-searchbox">
-                                <input type="text" placeholder="Maxsulot nomini kiriting...">
+                            <form action="{% url 'product' %}" class="hm-searchbox" method="get">
+                                <input type="text" name="q" placeholder="Maxsulot nomini kiriting...">
                                 <button class="header-search_btn" type="submit"><i
-                                        class="ion-ios-search-strong"><span>Qidrimoq</span></i></button>
+                                        class="ion-ios-search-strong"><span>Qidirish</span></i></button>
                             </form>
                         </div>
                     </div>
