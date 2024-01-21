@@ -60,15 +60,25 @@ def Contact(request):
 
 
 def Medias(request):
+    page = 1
     categories = Category.objects.all()
-    if request.GET:
-        key = request.GET.get('q')
+    key = request.GET.get('q', '')
+    if request.GET.get('p'):
+        page = request.GET.get('p')
+        medias = Media.objects.all()
+    if key:
         medias = Media.objects.filter(
             Q(name__contains=key) |
             Q(description__contains=key))
     else:
         medias = Media.objects.all()
-    return render(request, 'blog-2-column.html', {"categories": categories, "medias": medias})
+    pages = Paginator(medias, 4)
+
+    try:
+        result = pages.page(int(page))
+    except EmptyPage:
+        result = pages.page(1)
+    return render(request, 'blog-2-column.html', {"categories": categories, "medias": result})
 
 
 def Media_about(request):
