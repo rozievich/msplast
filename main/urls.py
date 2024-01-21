@@ -9,5 +9,5 @@ urlpatterns = [
     path("media/", Media, name="media"),
     path("media/about/", Media_about, name="media-about"),
     path("search/", Search, name="test"),
-    path("404/", Error, name="error")
+    path("404/", Error, name="error"),
 ]

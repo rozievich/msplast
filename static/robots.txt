@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /plyenka/
+Disallow: /pp-lenta/
+Disallow: /Pet lenta/
+Disallow: /Skoch/
+Disallow: /Salafan/
+Disallow: /Strech/
+Disallow: /Termousadka/
+Sitemap: http://example.com/sitemap.xml

@@ -1,5 +1,8 @@
 from django.shortcuts import render, HttpResponse
 
+from django.shortcuts import render
+
+
 
 def Home(request):
     context = {
