@@ -3,7 +3,6 @@ from django.shortcuts import render, HttpResponse
 from django.shortcuts import render
 
 
-
 def Home(request):
     context = {
 
@@ -26,6 +25,7 @@ def Shop(request):
     }
 
     return render(request, 'shop-grid-fullwidth.html', context)
+
 
 def Contact(request):
     context = {
