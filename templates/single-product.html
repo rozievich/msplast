@@ -162,24 +162,20 @@
                                 </div>
                                 <div id="cate-toggle" class="category-menu-list">
                                     <ul>
-                                        <li class="right-menu"><a href="{% url 'product' %}">Car Parts</a>
+                                        {% for category in categories %}
+                                        <li class="right-menu"><a href="{% url 'product' %}?c={{category.name}}">{{category.name}}</a>
                                         </li>
-                                        <li class="right-menu"><a href="{% url 'product' %}">Tools &amp; Accessories</a>
-                                            
-                                        </li>
-                                        <li class="right-menu"><a href="{% url 'product' %}">Suspension Systems</a>
-                                            
-                                        </li>
+                                        {% endfor %}
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="custom-search_col col-12">
                             <div class="hm-form_area">
-                                <form action="#" class="hm-searchbox">
-                                    <input type="text" placeholder="Maxsulot nomini kiriting...">
+                                <form action="{% url 'product' %}" class="hm-searchbox" method="get">
+                                    <input type="text" name="q" placeholder="Maxsulot nomini kiriting...">
                                     <button class="header-search_btn" type="submit"><i
-                                        class="ion-ios-search-strong"><span>Qidirmoq</span></i></button>
+                                            class="ion-ios-search-strong"><span>Qidirish</span></i></button>
                                 </form>
                             </div>
                         </div>
@@ -303,22 +299,7 @@
                                 "asNavFor": ".sp-img_slider-nav"
                                 }'>
                                     <div class="single-slide red zoom">
-                                        <img src="{% static 'images/product/large-size/1.jpg' %}" alt="Uren's Product Image">
-                                    </div>
-                                    <div class="single-slide orange zoom">
-                                        <img src="{% static 'images/product/large-size/2.jpg' %}" alt="Uren's Product Image">
-                                    </div>
-                                    <div class="single-slide brown zoom">
-                                        <img src="{% static 'images/product/large-size/3.jpg' %}" alt="Uren's Product Image">
-                                    </div>
-                                    <div class="single-slide umber zoom">
-                                        <img src="{% static 'images/product/large-size/4.jpg' %}" alt="Uren's Product Image">
-                                    </div>
-                                    <div class="single-slide black zoom">
-                                        <img src="{% static 'images/product/large-size/5.jpg' %}" alt="Uren's Product Image">
-                                    </div>
-                                    <div class="single-slide green zoom">
-                                        <img src="{% static 'images/product/large-size/6.jpg' %}" alt="Uren's Product Image">
+                                        <img src="{{product.image.url}}" alt="Product Image">
                                     </div>
                                 </div>
                                 <div class="sp-img_slider-nav slick-slider-nav uren-slick-slider slider-navigation_style-3" data-slick-options='{
@@ -333,82 +314,41 @@
                                         {"breakpoint":768, "settings": {"slidesToShow": 3}},
                                         {"breakpoint":575, "settings": {"slidesToShow": 2}}
                                     ]'>
+                                    {% for pro in products %}
                                     <div class="single-slide red">
-                                        <img src="{% static 'images/product/small-size/1.jpg' %}" alt="Uren's Product Thumnail">
+                                        <img src="{{pro.image.url}}" alt="Product Thumnail">
                                     </div>
-                                    <div class="single-slide orange">
-                                        <img src="{% static 'images/product/small-size/2.jpg' %}" alt="Uren's Product Thumnail">
-                                    </div>
-                                    <div class="single-slide brown">
-                                        <img src="{% static 'images/product/small-size/3.jpg' %}" alt="Uren's Product Thumnail">
-                                    </div>
-                                    <div class="single-slide umber">
-                                        <img src="{% static 'images/product/small-size/4.jpg' %}" alt="Uren's Product Thumnail">
-                                    </div>
-                                    <div class="single-slide red">
-                                        <img src="{% static 'images/product/small-size/5.jpg' %}" alt="Uren's Product Thumnail">
-                                    </div>
-                                    <div class="single-slide orange">
-                                        <img src="{% static 'images/product/small-size/6.jpg' %}" alt="Uren's Product Thumnail">
-                                    </div>
+                                    {% endfor %}
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-8">
                             <div class="sp-content">
                                 <div class="sp-heading">
-                                    <h5><a href="#">Polietilen plyonkalar</a></h5>
-                                </div>
-                                <span class="reference">Reference: demo_1</span>
-                                <div class="rating-box">
-                                    <ul>
-                                        <li><i class="ion-android-star"></i></li>
-                                        <li><i class="ion-android-star"></i></li>
-                                        <li><i class="ion-android-star"></i></li>
-                                        <li class="silver-color"><i class="ion-android-star"></i></li>
-                                        <li class="silver-color"><i class="ion-android-star"></i></li>
-                                    </ul>
+                                    <h5><a href="#">{{product.name}}</a></h5>
                                 </div>
                                 <div class="sp-essential_stuff">
                                     <ul>
-                                        <li>Brands <a href="javascript:void(0)">Buxton</a></li>
-                                        <li>Product Code: <a href="javascript:void(0)">Product 16</a></li>
-                                        <li>Reward Points: <a href="javascript:void(0)">100</a></li>
-                                        <li>Availability: <a href="javascript:void(0)">In Stock</a></li>
-                                        <li>EX Tax: <a href="javascript:void(0)"><span>$453.35</span></a></li>
-                                        <li>Price in reward points: <a href="javascript:void(0)">400</a></li>
+                                        <li>Kategoriya: <a href="{% url 'product' %}?c={{product.category}}">{{product.category}}</a></li>
+                                        <li>Turi: <a href="javascript:void(0)">{{product.get_types_display}}</a></li>
+                                        {% if product.types == 1 %}
+                                        <li>Og'irligi: <a href="javascript:void(0)">{{product.size}}</a></li>
+                                        {% else %}
+                                        <li>O'lchami: <a href="javascript:void(0)">{{product.size}}</a></li>
+                                        {% endif %}
+                                        <li>Sana: <a href="javascript:void(0)">{{product.created_at}}</a></li>
                                     </ul>
-                                </div>
-                                <div class="product-size_box">
-                                    <span>Size</span>
-                                    <select class="myniceselect nice-select">
-                                        <option value="1">S</option>
-                                        <option value="2">M</option>
-                                        <option value="3">L</option>
-                                        <option value="4">XL</option>
-                                    </select>
-                                </div>
-                                <div class="quantity">
-                                    <label>Quantity</label>
-                                    <div class="cart-plus-minus">
-                                        <input class="cart-plus-minus-box" value="1" type="text">
-                                        <div class="dec qtybutton"><i class="fa fa-angle-down"></i></div>
-                                        <div class="inc qtybutton"><i class="fa fa-angle-up"></i></div>
-                                    </div>
                                 </div>
                                 <div class="qty-btn_area">
                                     <ul>
-                                        <li><a class="qty-cart_btn" href="cart.html">Add To Cart</a></li>
-                                        <li><a class="qty-wishlist_btn" href="wishlist.html" data-toggle="tooltip" title="Add To Wishlist"><i class="ion-android-favorite-outline"></i></a>
-                                        </li>
-                                        <li><a class="qty-compare_btn" href="compare.html" data-toggle="tooltip" title="Compare This Product"><i class="ion-ios-shuffle-strong"></i></a></li>
+                                        <li><a class="qty-cart_btn" href="{% url 'product' %}">Barcha Mahsulotlar</a></li>
                                     </ul>
                                 </div>
                                 <div class="uren-tag-line">
-                                    <h6>Tags:</h6>
-                                    <a href="javascript:void(0)">vehicle</a>,
-                                    <a href="javascript:void(0)">car</a>,
-                                    <a href="javascript:void(0)">bike</a>
+                                    <h6>Ranglar:</h6>
+                                    {% for pro in product.color.all %}
+                                    <a href="javascript:void(0)">{{pro.name}}</a>,
+                                    {% endfor %}
                                 </div>
                                 <div class="uren-social_link">
                                     <ul>
@@ -464,8 +404,8 @@
                                     <div class="product-description">
                                         <ul>
                                             <li>
-                                                <strong>Ullam aliquam</strong>
-                                                <span>Voluptatum, minus? Optio molestias voluptates aspernatur laborum ratione minima, natus eaque nemo rem quisquam, suscipit architecto saepe. Debitis omnis labore laborum consectetur, quas, esse voluptates minus aliquam modi nesciunt earum! Vero rerum molestiae corporis libero repellat doloremque quae sapiente ratione maiores qui aliquam, sunt obcaecati! Iure nisi doloremque numquam delectus.</span>
+                                                <strong>{{product.name}}</strong>
+                                                <span>{{product.description}}</span>
                                             </li>
                                             
                                         </ul>
@@ -524,52 +464,37 @@
                                                 {"breakpoint":767, "settings": {"slidesToShow": 1}},
                                                 {"breakpoint":480, "settings": {"slidesToShow": 1}}
                                             ]'>
+                            {% for pro in products %}
                             <div class="product-slide_item">
                                 <div class="inner-slide">
                                     <div class="single-product">
                                         <div class="product-img">
                                             <a href="single-product.html">
-                                                <img class="primary-img" src="{% static 'images/product/medium-size/1-1.jpg' %}" alt="Uren's Product Image">
-                                                <img class="secondary-img" src="{% static 'images/product/medium-size/1-2.jpg' %}" alt="Uren's Product Image">
+                                                <img class="primary-img" src="{{pro.image.url}}" alt="Product Image">
                                             </a>
                                             <div class="sticker">
                                                 <span class="sticker">New</span>
                                             </div>
                                             <div class="add-actions">
                                                 <ul>
-                                                    <li><a class="uren-add_cart" href="cart.html" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="ion-bag"></i></a>
+                                                    <li><a class="uren-add_cart" href="{% url 'product' %}{{pro.id}}" data-toggle="list" data-placement="top" title="Barcha Mahsulotlar"><i class="ion-bag"></i></a>
                                                     </li>
-                                                    <li><a class="uren-wishlist" href="wishlist.html" data-toggle="tooltip" data-placement="top" title="Add To Wishlist"><i class="ion-android-favorite-outline"></i></a>
-                                                    </li>
-                                                    <li><a class="uren-add_compare" href="compare.html" data-toggle="tooltip" data-placement="top" title="Compare This Product"><i
-                                                            class="ion-android-options"></i></a>
-                                                    </li>
-                                                    <li class="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Quick View"><i
-                                                            class="ion-android-open"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <div class="product-content">
                                             <div class="product-desc_info">
-                                                <div class="rating-box">
-                                                    <ul>
-                                                        <li><i class="ion-android-star"></i></li>
-                                                        <li><i class="ion-android-star"></i></li>
-                                                        <li><i class="ion-android-star"></i></li>
-                                                        <li class="silver-color"><i class="ion-android-star"></i></li>
-                                                        <li class="silver-color"><i class="ion-android-star"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <h6><a class="product-name" href="single-product.html">Veniam officiis voluptates</a></h6>
+                                                <h6><a class="product-name" href="single-product.html">{{pro.name}}</a></h6>
                                                 <div class="price-box">
-                                                    <span class="new-price">$122.00</span>
+                                                    <span class="new-price">{{pro.created_at|date}}</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="product-slide_item">
+                            {% endfor %}
+                            {% comment %} <div class="product-slide_item">
                                 <div class="inner-slide">
                                     <div class="single-product">
                                         <div class="product-img">
@@ -881,7 +806,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> {% endcomment %}
                         </div>
                     </div>
                 </div>

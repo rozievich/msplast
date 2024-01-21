@@ -8,34 +8,28 @@ from .forms import SubscribeForm
 def Home(request):
     categories = Category.objects.all()
     medias = Media.objects.all()
-    context = {
-        "categories": categories,
-        "medias": medias,
-    }
-
-    return render(request, 'index.html', context)
+    return render(request, 'index.html', {"categories": categories, "medias": medias})
 
 
 def About(request):
     categories = Category.objects.all()
-    context = {
-        "categories": categories,
-    }
-
-    return render(request, 'about-us.html', context)
+    return render(request, 'about-us.html', {"categories": categories})
 
 
 def Shop(request):
     page = 1
     key = request.GET.get('q', '')
+    categories = Category.objects.all()
+    cat = request.GET.get('c', '')
     if request.GET.get('p'):
         page = request.GET.get('p')
         products = Product.objects.all()
     elif key:
         products = Product.objects.filter(Q(name__contains=key) | Q(description__contains=key))
+    elif cat:
+        products = Product.objects.filter(category__name=cat)
     else:
         products = Product.objects.all()
-    categories = Category.objects.all()
     pages = Paginator(products, 6)
 
     try:
@@ -81,24 +75,13 @@ def Medias(request):
     return render(request, 'blog-2-column.html', {"categories": categories, "medias": result})
 
 
-def Media_about(request):
-    context = {
+def ProductAbout(request, pk):
+    categories = Category.objects.all()
+    product = Product.objects.filter(id=pk).first()
+    products = Product.objects.filter(category=product.category)
+    return render(request, 'single-product.html', {"product": product, "products": products, "categories": categories})
 
-    }
-    return render(request, 'single-product.html', context)
-
-
-def Search(request):
-    context = {
-
-    }
-
-    return render(request, 'wishlist.html', context)
 
 
 def Error(request):
-    context = {
-
-    }
-
-    return render(request, '404.html', context)
+    return render(request, '404.html', {})

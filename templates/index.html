@@ -162,7 +162,7 @@
                             <div id="cate-toggle" class="category-menu-list">
                                 <ul>
                                     {% for category in categories %}
-                                    <li class="right-menu"><a href="?{{category.name}}">{{category.name}}</a>
+                                    <li class="right-menu"><a href="{% url 'product' %}?c={{category.name}}">{{category.name}}</a>
                                     </li>
                                     {% endfor %}
                                 </ul>
@@ -191,7 +191,6 @@
                                         <a href="#" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
                                         <a href="#" target="_blank"><i class="fab fa-telegram fa-2x"></i></a>
                                         <a href="#" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
-{#                                        <a href="#" target="_blank"><i class="fab fa-google-plus fa-2x"></i></a>#}
                                         <a href="#" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
                                     </div>
                                 </li>
@@ -314,7 +313,6 @@
                     <div class="banner-item img-hover_effect">
                         <div class="banner-img-1"></div>
                         <div class="banner-content">
-                            {#                                <h4>Polietilen</h4>#}
                             <h3>Plyonkalar</h3>
                             <p>Polietilen plyonka eng keng tarqalgan polimer materiallardan biridir, Ko'proq bilish
                                 uchun...</p>
@@ -328,7 +326,6 @@
                     <div class="banner-item img-hover_effect">
                         <div class="banner-img-1 banner-img-2"></div>
                         <div class="banner-content">
-                            {#                                <h4>Rotiform SFO </h4>#}
                             <h3>PET Lentalar</h3>
                             <p>Polyester lenta (PET):
                                 Bu sovuqqa chidamli qadoqlash lentasi bo'lib, u ko'proq elastiklik va yuk ko'tarish
@@ -352,7 +349,6 @@
                     <div class="banner-item img-hover_effect">
                         <div class="banner-img-1 banner-img-2"></div>
                         <div class="banner-content">
-                            {#                                <h4>Rotiform SFO </h4>#}
                             <h3>PP Lentalar</h3>
                             <p>PP qadoqlash lentasi (polipropilen lenta) 100% toza polipropilendan tayyorlanadi, eng
                                 yuqori talablarga javob beradi va quyidagi sifat ko'rsatkichlariga ega: - yuqori
@@ -367,7 +363,6 @@
                     <div class="banner-item img-hover_effect">
                         <div class="banner-img-1"></div>
                         <div class="banner-content">
-                            {#                                <h4>Polietilen</h4>#}
                             <h3>Plyonkalar</h3>
                             <p>Polietilen plyonka eng keng tarqalgan polimer materiallardan biridir, Ko'proq bilish
                                 uchun...</p>
@@ -405,8 +400,7 @@
                                 <div class="inner-slide">
                                     <div class="blog-img img-hover_effect">
                                         <a href="blog-details-left-sidebar.html">
-                                            <iframe width="340" height="220" src="https://www.youtube.com/embed/daegKkiD_QY?si=thXa6WP8VuLnXZYE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                            {% comment %} <img src="{% static 'images/blog/large-size/1.jpg' %}" alt="Uren's Blog Image"> {% endcomment %}
+                                            <iframe width="340" height="220" src="{{media.url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                         </a>
                                         <span class="post-date">{{media.created_at|date}}</span>
                                     </div>
@@ -485,7 +479,6 @@
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>

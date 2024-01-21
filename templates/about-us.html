@@ -163,7 +163,7 @@
                             <div id="cate-toggle" class="category-menu-list">
                                 <ul>
                                     {% for category in categories %}
-                                    <li class="right-menu"><a href="?{{category.name}}">{{category.name}}</a>
+                                    <li class="right-menu"><a href="{% url 'product' %}?c={{category.name}}">{{category.name}}</a>
                                     </li>
                                     {% endfor %}
                                 </ul>
