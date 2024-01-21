@@ -27,7 +27,6 @@ def Shop(request):
 
     return render(request, 'shop-grid-fullwidth.html', context)
 
-
 def Contact(request):
     context = {
 
