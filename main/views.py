@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.db.models import Q
+from django.core.paginator import Paginator, EmptyPage
 from .models import Product, Category, Media
 from .forms import SubscribeForm
 
@@ -25,16 +26,24 @@ def About(request):
 
 
 def Shop(request):
-    if request.GET:
-        key = request.GET.get('q')
-        products = Product.objects.filter(
-            Q(name__contains=key) |
-            Q(description__contains=key))
-        
+    page = 1
+    key = request.GET.get('q', '')
+    if request.GET.get('p'):
+        page = request.GET.get('p')
+        products = Product.objects.all()
+    elif key:
+        products = Product.objects.filter(Q(name__contains=key) | Q(description__contains=key))
     else:
         products = Product.objects.all()
     categories = Category.objects.all()
-    return render(request, 'shop-grid-fullwidth.html', {"products": products, "categories": categories})
+    pages = Paginator(products, 6)
+
+    try:
+        result = pages.page(int(page))
+    except EmptyPage:
+        result = pages.page(1)
+
+    return render(request, 'shop-grid-fullwidth.html', {"products": result, "categories": categories})
 
 
 def Contact(request):
