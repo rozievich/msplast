@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-22 18:41+0500\n"
+"POT-Creation-Date: 2024-01-22 21:52+0500\n"
 "Language: ru\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -354,9 +354,33 @@ msgstr "Все Продукты"
 msgid "Maxsulot Turlari"
 msgstr "Типы Продуктов"
 
+#: templates/single-product.html:346
+msgid "Kategoriya"
+msgstr "Категории"
+
+#: templates/single-product.html:349
+msgid "Turi"
+msgstr "Тип"
+
+#: templates/single-product.html:351
+msgid "Og'irligi"
+msgstr "Вес"
+
+#: templates/single-product.html:353
+msgid "O'lchami"
+msgstr "Размер"
+
+#: templates/single-product.html:355
+msgid "Sana"
+msgstr "Дата"
+
 #: templates/single-product.html:360 templates/single-product.html:504
 msgid "Barcha Mahsulotlar"
 msgstr "Все Продукты"
+
+#: templates/single-product.html:364
+msgid "Ranglar"
+msgstr "Цвета"
 
 #: templates/single-product.html:419
 msgid "Maxsulot Haqida"

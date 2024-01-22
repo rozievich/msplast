@@ -343,16 +343,16 @@
                             </div>
                             <div class="sp-essential_stuff">
                                 <ul>
-                                    <li>Kategoriya: <a
+                                    <li>{% blocktrans %}Kategoriya{% endblocktrans %}: <a
                                             href="{% url 'product' %}?c={{ product.category }}">{{ product.category }}</a>
                                     </li>
-                                    <li>Turi: <a href="javascript:void(0)">{{ product.get_types_display }}</a></li>
+                                    <li>{% blocktrans %}Turi{% endblocktrans %}: <a href="javascript:void(0)">{{ product.get_types_display }}</a></li>
                                     {% if product.types == 1 %}
-                                        <li>Og'irligi: <a href="javascript:void(0)">{{ product.size }}</a></li>
+                                        <li>{% blocktrans %}Og'irligi{% endblocktrans %}: <a href="javascript:void(0)">{{ product.size }}</a></li>
                                     {% else %}
-                                        <li>O'lchami: <a href="javascript:void(0)">{{ product.size }}</a></li>
+                                        <li>{% blocktrans %}O'lchami{% endblocktrans %}: <a href="javascript:void(0)">{{ product.size }}</a></li>
                                     {% endif %}
-                                    <li>Sana: <a href="javascript:void(0)">{{ product.created_at }}</a></li>
+                                    <li>{% blocktrans %}Sana{% endblocktrans %}: <a href="javascript:void(0)">{{ product.created_at }}</a></li>
                                 </ul>
                             </div>
                             <div class="qty-btn_area">
@@ -361,7 +361,7 @@
                                 </ul>
                             </div>
                             <div class="uren-tag-line">
-                                <h6>Ranglar:</h6>
+                                <h6>{% blocktrans %}Ranglar{% endblocktrans %}:</h6>
                                 {% for pro in product.color.all %}
                                     <a href="javascript:void(0)">{{ pro.name }}</a>,
                                 {% endfor %}
