@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -54,13 +55,13 @@
                         <div class="main-menu_area position-relative">
                             <nav class="main-nav">
                                 <ul>
-                                    <li class="dropdown-holder "><a href="{% url 'home' %}">Bosh Sahifa</a>
+                                    <li class="dropdown-holder "><a href="{% url 'home' %}">{% blocktrans %}Bosh Sahifa{% endblocktrans %}</a>
                                     </li>
-                                    <li class="megamenu-holder "><a href="{% url 'product' %}">Maxsulotlar</a>
+                                    <li class="megamenu-holder "><a href="{% url 'product' %}">{% blocktrans %}Maxsulotlar{% endblocktrans %}</a>
                                     </li>
-                                    <li class=""><a href="{% url 'about' %}">Biz Haqimizda</a></li>
-                                    <li class=""><a href="{% url 'contact' %}">Bog'lanish</a></li>
-                                    <li class="active"><a href="{% url 'media' %}">Media</a>
+                                    <li class=""><a href="{% url 'about' %}">{% blocktrans %}Biz Haqimizda{% endblocktrans %}</a></li>
+                                    <li class=""><a href="{% url 'contact' %}">{% blocktrans %}Bog'lanish{% endblocktrans %}</a></li>
+                                    <li class="active"><a href="{% url 'media' %}">{% blocktrans %}Media{% endblocktrans %}</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -70,14 +71,25 @@
                         <div class="ht-right_area">
                             <div class="ht-menu">
                                 <ul>
-                                    <li><a href="javascript:void(0)">Tillar <i class="fa fa-chevron-down"></i></a>
+                                    <li><a href="javascript:void(0)">{% blocktrans %}Tillar{% endblocktrans %} <i class="fa fa-chevron-down"></i></a>
                                         <ul class="ht-dropdown">
-                                            <li class="active"><a href="javascript:void(0)"><img
-                                                    src="{% static 'images/menu/icon/1.jpg' %}"
-                                                    alt="JB's Language Icon">English</a></li>
-                                            <li><a href="javascript:void(0)"><img
-                                                    src="{% static 'images/menu/icon/2.jpg' %}"
-                                                    alt="JB's Language Icon">Français</a>
+                                            <li>
+                                                <form action="{% url 'set_language' %}" method="post"
+                                                      class="language-form">
+                                                    {% csrf_token %}
+                                                    <input name="next" type="hidden" value="{{ redirect_to }}">
+                                                    <select name="language" onchange="this.form.submit()">
+                                                        {% get_current_language as LANGUAGE_CODE %}
+                                                        {% get_available_languages as LANGUAGES %}
+                                                        {% get_language_info_list for LANGUAGES as languages %}
+                                                        {% for language in languages %}
+                                                            <option value="{{ language.code }}"
+                                                                    {% if language.code == LANGUAGE_CODE %}selected{% endif %}>
+                                                                {{ language.name_local }} ({{ language.code }})
+                                                            </option>
+                                                        {% endfor %}
+                                                    </select>
+                                                </form>
                                             </li>
                                         </ul>
                                     </li>
@@ -95,13 +107,13 @@
                         <div class="main-menu_area position-relative">
                             <nav class="main-nav">
                                 <ul>
-                                    <li class="dropdown-holder "><a href="{% url 'home' %}">Bosh Sahifa</a>
+                                    <li class="dropdown-holder "><a href="{% url 'home' %}">{% blocktrans %}Bosh Sahifa{% endblocktrans %}</a>
                                     </li>
-                                    <li class="megamenu-holder "><a href="{% url 'product' %}">Maxsulotlar</a>
+                                    <li class="megamenu-holder "><a href="{% url 'product' %}">{% blocktrans %}Maxsulotlar{% endblocktrans %}</a>
                                     </li>
-                                    <li class=""><a href="{% url 'about' %}">Biz Haqimizda</a></li>
-                                    <li class=""><a href="{% url 'contact' %}">Bog'lanish</a></li>
-                                    <li class="active"><a href="{% url 'media' %}">Media</a>
+                                    <li class=""><a href="{% url 'about' %}">{% blocktrans %}Biz Haqimizda{% endblocktrans %}</a></li>
+                                    <li class=""><a href="{% url 'contact' %}">{% blocktrans %}Bog'lanish{% endblocktrans %}</a></li>
+                                    <li class="active"><a href="{% url 'media' %}">{% blocktrans %}Media{% endblocktrans %}</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -127,7 +139,6 @@
                                         <a href="#" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
                                         <a href="#" target="_blank"><i class="fab fa-telegram fa-2x"></i></a>
                                         <a href="#" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
-                                        {#                                        <a href="#" target="_blank"><i class="fab fa-google-plus fa-2x"></i></a>#}
                                         <a href="#" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
                                     </div>
                                 </li>
@@ -154,15 +165,16 @@
                         <div class="category-menu category-menu-hidden">
                             <div class="category-heading">
                                 <h2 class="categories-toggle">
-                                    <span>Bizning</span>
-                                    <span>Maxsulotlar</span>
+                                    <span>{% blocktrans %}Bizning{% endblocktrans %}</span>
+                                    <span>{% blocktrans %}Maxsulotlar{% endblocktrans %}</span>
                                 </h2>
                             </div>
                             <div id="cate-toggle" class="category-menu-list">
                                 <ul>
                                     {% for category in categories %}
-                                    <li class="right-menu"><a href="{% url 'product' %}?c={{category.name}}">{{category.name}}</a>
-                                    </li>
+                                        <li class="right-menu"><a
+                                                href="{% url 'product' %}?c={{ category.name }}">{{ category.name }}</a>
+                                        </li>
                                     {% endfor %}
                                 </ul>
                             </div>
@@ -171,9 +183,9 @@
                     <div class="custom-search_col col-12">
                         <div class="hm-form_area">
                             <form action="{% url 'media' %}" method="get" class="hm-searchbox">
-                                <input type="text" name="q" placeholder="Media nomini kiriting ...">
+                                <input type="text" name="q" placeholder="{% blocktrans %}Media nomini kiriting{% endblocktrans %} ...">
                                 <button class="header-search_btn" type="submit"><i
-                                        class="ion-ios-search-strong"><span>Qidirmoq</span></i></button>
+                                        class="ion-ios-search-strong"><span>{% blocktrans %}Qidirish{% endblocktrans %}</span></i></button>
                             </form>
                         </div>
                     </div>
@@ -215,46 +227,44 @@
                     <nav class="offcanvas-navigation">
                         <ul class="mobile-menu">
                             <li class="menu-item-has-children active"><a href="{% url 'home' %}"><span
-                                    class="mm-text">Bosh Sahifa</span></a>
+                                    class="mm-text">{% blocktrans %}Bosh Sahifa{% endblocktrans %}</span></a>
 
                             </li>
                             <li class="menu-item-has-children">
                                 <a href="{% url 'product' %}">
-                                    <span class="mm-text">Maxsulotlar</span>
+                                    <span class="mm-text">{% blocktrans %}Maxsulotlar{% endblocktrans %}</span>
                                 </a>
                             </li>
                             <li class="menu-item-has-children">
                                 <a href="{% url 'media' %}">
-                                    <span class="mm-text">Media</span>
+                                    <span class="mm-text">{% blocktrans %}Media{% endblocktrans %}</span>
                                 </a>
                             </li>
                         </ul>
                     </nav>
                     <nav class="offcanvas-navigation user-setting_area">
                         <ul class="mobile-menu">
-
-                            <li class="menu-item-has-children"><a href="javascript:void(0)"><span
-                                    class="mm-text">Tillar</span></a>
+                            <li class="menu-item-has-children">
+                                <a>
+                                    <span class="mm-text">{% blocktrans %}Tillar{% endblocktrans %}</span>
+                                </a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="javascript:void(0)">
-                                            <span class="mm-text">English</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <span class="mm-text">Français</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <span class="mm-text">Romanian</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <span class="mm-text">Japanese</span>
-                                        </a>
+                                        <form action="{% url 'set_language' %}" method="post" class="language-form">
+                                            {% csrf_token %}
+                                            <input name="next" type="hidden" value="{{ redirect_to }}">
+                                            <select name="language" onchange="this.form.submit()">
+                                                {% get_current_language as LANGUAGE_CODE %}
+                                                {% get_available_languages as LANGUAGES %}
+                                                {% get_language_info_list for LANGUAGES as languages %}
+                                                {% for language in languages %}
+                                                    <option value="{{ language.code }}"
+                                                            {% if language.code == LANGUAGE_CODE %}selected{% endif %}>
+                                                        {{ language.name_local }} ({{ language.code }})
+                                                    </option>
+                                                {% endfor %}
+                                            </select>
+                                        </form>
                                     </li>
                                 </ul>
                             </li>
@@ -270,10 +280,10 @@
     <div class="breadcrumb-area">
         <div class="container">
             <div class="breadcrumb-content">
-                <h2>Bizning YouTube videolar</h2>
+                <h2>{% blocktrans %}Bizning YouTube videolar{% endblocktrans %}</h2>
                 <ul>
-                    <li><a href="{% url 'home' %}">Bosh Sahifa</a></li>
-                    <li class="active">Media</li>
+                    <li><a href="{% url 'home' %}">{% blocktrans %}Bosh Sahifa{% endblocktrans %}</a></li>
+                    <li class="active">{% blocktrans %}Media{% endblocktrans %}</li>
                 </ul>
             </div>
         </div>
@@ -287,23 +297,20 @@
                 <div class="col-lg-12">
                     <div class="row blog-item_wrap">
                         {% for media in medias %}
-                        <div class="col-lg-6">
-                            <div class="blog-item">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe src="{{media.url}}"
-                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen>
-                                    </iframe>
-                                </div>
-                                <div class="blog-content">
-                                    <h3><a href="blog-details-left-sidebar.html">{{media.name}}</a></h3>
-                                    <p>{{media.description|slice:":100"}}</p>
-                                    <div class="uren-btn-ps_left">
-                                        <a class="uren-btn-2" href="blog-details-left-sidebar.html">Read More</a>
+                            <div class="col-lg-6">
+                                <div class="blog-item">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe src="{{ media.url }}"
+                                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                    <div class="blog-content">
+                                        <h3><a>{{ media.name }}</a></h3>
+                                        <p>{{ media.description|slice:":100" }}</p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                         {% endfor %}
                     </div>
                     <div class="row">
@@ -312,14 +319,18 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         {% if medias %}
-                                        <ul class="uren-pagination-box primary-color">
-                                            {% if medias.has_previous %}
-                                            <li><a class="Previous" href="{% url 'media' %}?p={{medias.previous_page_number}}">Previous</a></li>
-                                            {% endif %}
-                                            {% if medias.has_next %}
-                                            <li><a class="Next" href="{% url 'media' %}?p={{medias.next_page_number}}">Next</a></li>
-                                            {% endif %}
-                                        </ul>
+                                            <ul class="uren-pagination-box primary-color">
+                                                {% if medias.has_previous %}
+                                                    <li><a class="Previous"
+                                                           href="{% url 'media' %}?p={{ medias.previous_page_number }}">Previous</a>
+                                                    </li>
+                                                {% endif %}
+                                                {% if medias.has_next %}
+                                                    <li><a class="Next"
+                                                           href="{% url 'media' %}?p={{ medias.next_page_number }}">Next</a>
+                                                    </li>
+                                                {% endif %}
+                                            </ul>
                                         {% endif %}
                                     </div>
                                 </div>
@@ -348,18 +359,15 @@
                                     </a>
                                 </div>
                                 <div class="widget-short_desc">
-                                    <p>Kompaniyamiz 20 yillik tajriba va malakaga ega bo'lib, yuqori sifatli Polietilen
-                                        plyonka ishlab chiqarish sohasida taniqliroq bo'lib kelmoqda. Bizning maqsadimiz
-                                        mijozlarimizga qulay va innovatsion mahsulotlar taqdim etishdir.
+                                    <p>{% blocktrans %}Kompaniyamiz 20 yillik tajriba va malakaga ega bo'lib, yuqori sifatli Polietilen plyonka ishlab chiqarish sohasida taniqliroq bo'lib kelmoqda. Bizning maqsadimiz mijozlarimizga qulay va innovatsion mahsulotlar taqdim etishdir.{% endblocktrans %}
 
                                     </p>
                                 </div>
                                 <div class="widgets-essential_stuff">
                                     <ul>
-                                        <li class="uren-address"><span>Manzil:</span> Toshkent Viloyati Zangiota Tumani
-                                            Navqiron MFY, Markaz Shox, pr. 9 ko'chasi, 43-uy
+                                        <li class="uren-address"><span>{% blocktrans %}Manzil{% endblocktrans %}:</span>{% blocktrans %}Toshkent Viloyati Zangiota Tumani Navqiron MFY, Markaz Shox, pr. 9 ko'chasi, 43-uy{% endblocktrans %}
                                         </li>
-                                        <li class="uren-phone"><span>Telefon
+                                        <li class="uren-phone"><span>{% blocktrans %}Telefon{% endblocktrans %}
                                         :</span> <a href="tel://+123123321345">+123 321 345</a>
                                         </li>
 
@@ -442,11 +450,7 @@
     <!-- jQuery Zoom JS -->
     <script src="{% static 'js/plugins/jquery.zoom.min.js' %}"></script>
 
-    <!-- Vendor & Plugins JS (Please remove the comment from below vendor.min.js & plugins.min.js for better website load performance and remove js files from avobe) -->
-    <!--{% static '
-<script src="js/vendor/vendor.min.js"></script>
-<script src="js/plugins/plugins.min.js"></script>
-' %}-->
+  
 
     <!-- Main JS -->
     <script src="{% static 'js/main.js' %}"></script>

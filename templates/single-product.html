@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -6,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>MS Plast</title>
-    <meta name="robots" content="noindex, follow" />
+    <meta name="robots" content="noindex, follow"/>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
@@ -35,10 +36,8 @@
     <link rel="stylesheet" href="{% static 'css/plugins/nice-select.css' %}">
 
     <!-- Vendor & Plugins CSS (Please remove the comment from below vendor.min.css & plugins.min.css for better website load performance and remove css files from the above) -->
-    <!--{% static '
-    <script src="js/vendor/vendor.min.js"></script>
-    <script src="js/plugins/plugins.min.js"></script>
-    ' %}-->
+ 
+   
 
     <!-- Main Style CSS (Please use minify version for better website load performance) -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -48,249 +47,263 @@
 
 <body class="template-color-1">
 
-    <div class="main-wrapper">
+<div class="main-wrapper">
 
-        <!-- Begin Uren's Header Main Area -->
-        <header class="header-main_area bg--sapphire">
-            <div class="header-top_area d-lg-block d-none">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-xl-7 col-lg-8">
-                            <div class="main-menu_area position-relative">
-                                <nav class="main-nav">
-                                    <ul>
-                                        <li class="dropdown-holder "><a href="{% url 'home' %}">Bosh Sahifa</a>
-                                        </li>
-                                        <li class="megamenu-holder active"><a href="{% url 'product' %}">Maxsulotlar</a>
-                                        </li>
-                                        <li class=""><a href="{% url 'about' %}">Biz Haqimizda</a></li>
-                                        <li class=""><a href="{% url 'contact' %}">Bog'lanish</a></li>
-                                        <li class=""><a href="{% url 'media' %}">Media</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="col-xl-5 col-lg-4">
-                            <div class="ht-right_area">
-                                <div class="ht-menu">
-                                    <ul>
-                                        <li><a href="javascript:void(0)">Tillar <i class="fa fa-chevron-down"></i></a>
-                                            <ul class="ht-dropdown">
-                                                <li class="active"><a href="javascript:void(0)"><img src="{% static 'images/menu/icon/1.jpg' %}" alt="JB's Language Icon">English</a></li>
-                                                <li><a href="javascript:void(0)"><img src="{% static 'images/menu/icon/2.jpg' %}" alt="JB's Language Icon">Français</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+    <!-- Begin Uren's Header Main Area -->
+    <header class="header-main_area bg--sapphire">
+        <div class="header-top_area d-lg-block d-none">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-8">
+                        <div class="main-menu_area position-relative">
+                            <nav class="main-nav">
+                                <ul>
+                                    <li class="dropdown-holder "><a href="{% url 'home' %}">{% blocktrans %}Bosh Sahifa{% endblocktrans %}</a>
+                                    </li>
+                                    <li class="megamenu-holder active"><a href="{% url 'product' %}">{% blocktrans %}Maxsulotlar{% endblocktrans %}</a>
+                                    </li>
+                                    <li class=""><a href="{% url 'about' %}">{% blocktrans %}Biz Haqimizda{% endblocktrans %}</a></li>
+                                    <li class=""><a href="{% url 'contact' %}">{% blocktrans %}Bog'lanish{% endblocktrans %}</a></li>
+                                    <li class=""><a href="{% url 'media' %}">{% blocktrans %}Media{% endblocktrans %}</a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="header-top_area header-sticky bg--sapphire">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-xl-8 col-lg-7 d-lg-block d-none">
-                            <div class="main-menu_area position-relative">
-                                <nav class="main-nav">
-                                    <ul>
-                                        <li class="dropdown-holder "><a href="{% url 'home' %}">Bosh Sahifa</a>
-                                        </li>
-                                        <li class="megamenu-holder active"><a href="{% url 'product' %}">Maxsulotlar </a>
-                                            
-                                        </li>
-                                        <li class=""><a href="{% url 'about' %}">Biz Haqimizda</a></li>
-                                        <li class=""><a href="{% url 'contact' %}">Bog'lanish</a></li>
-                                        <li class=""><a href="{% url 'media' %}">Media </a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="col-sm-3 d-block d-lg-none">
-                            <div class="header-logo_area header-sticky_logo">
-                                <a href="{% url 'home' %}">
-                                    <img src="{% static 'images/menu/logo/1.png' %}" alt="Uren's Logo">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-5 col-sm-9">
-                            <div class="header-right_area">
+                    <div class="col-xl-5 col-lg-4">
+                        <div class="ht-right_area">
+                            <div class="ht-menu">
                                 <ul>
-                                    <li class="mobile-menu_wrap d-flex d-lg-none">
-                                        <a href="#mobileMenu" class="mobile-menu_btn toolbar-btn color--white">
-                                            <i class="ion-navicon"></i>
-                                        </a>
-                                    </li>
-                                    <li class="minicart-wrap">
-                                        <div class="social-icons">
-                                        <a href="#" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
-                                        <a href="#" target="_blank"><i class="fab fa-telegram fa-2x"></i></a>
-                                        <a href="#" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
-                                        {#                                        <a href="#" target="_blank"><i class="fab fa-google-plus fa-2x"></i></a>#}
-                                        <a href="#" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-                                    </div>
-                                    </li>
-                                    <li class="contact-us_wrap">
-                                        <a href="tel://+123123321345"><i class="ion-android-call"></i>+123 321 345</a>
+                                    <li><a href="javascript:void(0)">{% blocktrans %}Tillar{% endblocktrans %}<i class="fa fa-chevron-down"></i></a>
+                                        <ul class="ht-dropdown">
+                                            <li>
+                                                <form action="{% url 'set_language' %}" method="post"
+                                                      class="language-form">
+                                                    {% csrf_token %}
+                                                    <input name="next" type="hidden" value="{{ redirect_to }}">
+                                                    <select name="language" onchange="this.form.submit()">
+                                                        {% get_current_language as LANGUAGE_CODE %}
+                                                        {% get_available_languages as LANGUAGES %}
+                                                        {% get_language_info_list for LANGUAGES as languages %}
+                                                        {% for language in languages %}
+                                                            <option value="{{ language.code }}"
+                                                                    {% if language.code == LANGUAGE_CODE %}selected{% endif %}>
+                                                                {{ language.name_local }} ({{ language.code }})
+                                                            </option>
+                                                        {% endfor %}
+                                                    </select>
+                                                </form>
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="header-middle_area">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="custom-logo_col col-12">
-                            <div class="header-logo_area">
-                                <a href="{% url 'home' %}">
-                                    <img src="{% static 'images/menu/logo/1.png' %}" alt="Uren's Logo">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="custom-category_col col-12">
-                            <div class="category-menu category-menu-hidden">
-                                <div class="category-heading">
-                                    <h2 class="categories-toggle">
-                                        <span>Bizning</span>
-                                        <span>Maxsulotlar</span>
-                                    </h2>
-                                </div>
-                                <div id="cate-toggle" class="category-menu-list">
-                                    <ul>
-                                        {% for category in categories %}
-                                        <li class="right-menu"><a href="{% url 'product' %}?c={{category.name}}">{{category.name}}</a>
-                                        </li>
-                                        {% endfor %}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="custom-search_col col-12">
-                            <div class="hm-form_area">
-                                <form action="{% url 'product' %}" class="hm-searchbox" method="get">
-                                    <input type="text" name="q" placeholder="Maxsulot nomini kiriting...">
-                                    <button class="header-search_btn" type="submit"><i
-                                            class="ion-ios-search-strong"><span>Qidirish</span></i></button>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="custom-cart_col col-12">
-                            <div class="header-right_area">
-                                <ul>
-                                    <li class="mobile-menu_wrap d-flex d-lg-none">
-                                        <a href="#mobileMenu" class="mobile-menu_btn toolbar-btn color--white">
-                                            <i class="ion-navicon"></i>
-                                        </a>
-                                    </li>
-                                    <li class="minicart-wrap">
-                                        <div class="social-icons">
-                                        <a href="#" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
-                                        <a href="#" target="_blank"><i class="fab fa-telegram fa-2x"></i></a>
-                                        <a href="#" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
-                                        {#                                        <a href="#" target="_blank"><i class="fab fa-google-plus fa-2x"></i></a>#}
-                                        <a href="#" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-                                    </div>
-                                    </li>
-                                    <li class="contact-us_wrap">
-                                        <a href="tel://+123123321345"><i class="ion-android-call"></i>+123 321 345</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="mobile-menu_wrapper" id="mobileMenu">
-                <div class="offcanvas-menu-inner">
-                    <div class="container">
-                        <a href="#" class="btn-close"><i class="ion-android-close"></i></a>
-                        <div class="offcanvas-inner_search">
-                            <form action="{% url 'product' %}" class="inner-searchbox">
-                                <input type="text" name='q' placeholder="Search for item...">
-                                <button class="search_btn" type="submit"><i class="ion-ios-search-strong"></i></button>
-                            </form>
-                        </div>
-                        <nav class="offcanvas-navigation">
-                            <ul class="mobile-menu">
-                                <li class="menu-item-has-children active"><a href="{% url 'home' %}"><span
-                                        class="mm-text">Bosh Sahifa</span></a>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="{% url 'product' %}">
-                                        <span class="mm-text">Maxsulotlar</span>
-                                    </a>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="{% url 'media' %}">
-                                        <span class="mm-text">Media</span>
-                                    </a>
-                                    
-                                </li>
-                            </ul>
-                        </nav>
-                        <nav class="offcanvas-navigation user-setting_area">
-                            <ul class="mobile-menu">
-                                
-                                <li class="menu-item-has-children"><a href="javascript:void(0)"><span
-                                        class="mm-text">Tillar</span></a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="javascript:void(0)">
-                                                <span class="mm-text">English</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">
-                                                <span class="mm-text">Français</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">
-                                                <span class="mm-text">Romanian</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">
-                                                <span class="mm-text">Japanese</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- Uren's Header Main Area End Here -->
-
-        <!-- Begin Uren's Breadcrumb Area -->
-        <div class="breadcrumb-area">
-            <div class="container">
-                <div class="breadcrumb-content">
-                    <h2>Maxsulotlar</h2>
-                    <ul>
-                        <li><a href="{% url 'home' %}">Bosh Sahifa</a></li>
-                        <li class="active">Maxsulot</li>
-                    </ul>
                 </div>
             </div>
         </div>
-        <!-- Uren's Breadcrumb Area End Here -->
-
-        <!-- Begin Uren's Single Product Area -->
-        <div class="sp-area">
+        <div class="header-top_area header-sticky bg--sapphire">
             <div class="container-fluid">
-                <div class="sp-nav">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="sp-img_area">
-                                <div class="sp-img_slider slick-img-slider uren-slick-slider" data-slick-options='{
+                <div class="row">
+                    <div class="col-xl-8 col-lg-7 d-lg-block d-none">
+                        <div class="main-menu_area position-relative">
+                            <nav class="main-nav">
+                                <ul>
+                                    <li class="dropdown-holder "><a href="{% url 'home' %}">{% blocktrans %}Bosh Sahifa{% endblocktrans %}</a>
+                                    </li>
+                                    <li class="megamenu-holder active"><a href="{% url 'product' %}">{% blocktrans %}Maxsulotlar{% endblocktrans %}</a>
+
+                                    </li>
+                                    <li class=""><a href="{% url 'about' %}">{% blocktrans %}Biz Haqimizda{% endblocktrans %}</a></li>
+                                    <li class=""><a href="{% url 'contact' %}">{% blocktrans %}Bog'lanish{% endblocktrans %}</a></li>
+                                    <li class=""><a href="{% url 'media' %}">{% blocktrans %}Media{% endblocktrans %}</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 d-block d-lg-none">
+                        <div class="header-logo_area header-sticky_logo">
+                            <a href="{% url 'home' %}">
+                                <img src="{% static 'images/menu/logo/1.png' %}" alt="Uren's Logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-sm-9">
+                        <div class="header-right_area">
+                            <ul>
+                                <li class="mobile-menu_wrap d-flex d-lg-none">
+                                    <a href="#mobileMenu" class="mobile-menu_btn toolbar-btn color--white">
+                                        <i class="ion-navicon"></i>
+                                    </a>
+                                </li>
+                                <li class="minicart-wrap">
+                                    <div class="social-icons">
+                                        <a href="#" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+                                        <a href="#" target="_blank"><i class="fab fa-telegram fa-2x"></i></a>
+                                        <a href="#" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+                                        {#                                        <a href="#" target="_blank"><i class="fab fa-google-plus fa-2x"></i></a>#}
+                                        <a href="#" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+                                    </div>
+                                </li>
+                                <li class="contact-us_wrap">
+                                    <a href="tel://+123123321345"><i class="ion-android-call"></i>+123 321 345</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-middle_area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="custom-logo_col col-12">
+                        <div class="header-logo_area">
+                            <a href="{% url 'home' %}">
+                                <img src="{% static 'images/menu/logo/1.png' %}" alt="Uren's Logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="custom-category_col col-12">
+                        <div class="category-menu category-menu-hidden">
+                            <div class="category-heading">
+                                <h2 class="categories-toggle">
+                                    <span>{% blocktrans %}Bizning{% endblocktrans %}</span>
+                                    <span>{% blocktrans %}Maxsulotlar{% endblocktrans %}</span>
+                                </h2>
+                            </div>
+                            <div id="cate-toggle" class="category-menu-list">
+                                <ul>
+                                    {% for category in categories %}
+                                        <li class="right-menu"><a
+                                                href="{% url 'product' %}?c={{ category.name }}">{{ category.name }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="custom-search_col col-12">
+                        <div class="hm-form_area">
+                            <form action="{% url 'product' %}" class="hm-searchbox" method="get">
+                                <input type="text" name="q" placeholder="{% blocktrans %}Maxsulot nomini kiriting...{% endblocktrans %}">
+                                <button class="header-search_btn" type="submit"><i
+                                        class="ion-ios-search-strong"><span>{% blocktrans %}Qidirish{% endblocktrans %}</span></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="custom-cart_col col-12">
+                        <div class="header-right_area">
+                            <ul>
+                                <li class="mobile-menu_wrap d-flex d-lg-none">
+                                    <a href="#mobileMenu" class="mobile-menu_btn toolbar-btn color--white">
+                                        <i class="ion-navicon"></i>
+                                    </a>
+                                </li>
+                                <li class="minicart-wrap">
+                                    <div class="social-icons">
+                                        <a href="#" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+                                        <a href="#" target="_blank"><i class="fab fa-telegram fa-2x"></i></a>
+                                        <a href="#" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+                                        {#                                        <a href="#" target="_blank"><i class="fab fa-google-plus fa-2x"></i></a>#}
+                                        <a href="#" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+                                    </div>
+                                </li>
+                                <li class="contact-us_wrap">
+                                    <a href="tel://+123123321345"><i class="ion-android-call"></i>+123 321 345</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu_wrapper" id="mobileMenu">
+            <div class="offcanvas-menu-inner">
+                <div class="container">
+                    <a href="#" class="btn-close"><i class="ion-android-close"></i></a>
+                    <div class="offcanvas-inner_search">
+                        <form action="{% url 'product' %}" class="inner-searchbox">
+                            <input type="text" name='q' placeholder="Search for item...">
+                            <button class="search_btn" type="submit"><i class="ion-ios-search-strong"></i></button>
+                        </form>
+                    </div>
+                    <nav class="offcanvas-navigation">
+                        <ul class="mobile-menu">
+                            <li class="menu-item-has-children active"><a href="{% url 'home' %}"><span
+                                    class="mm-text">{% blocktrans %}Bosh Sahifa{% endblocktrans %}</span></a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="{% url 'product' %}">
+                                    <span class="mm-text">{% blocktrans %}Maxsulotlar{% endblocktrans %}</span>
+                                </a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="{% url 'media' %}">
+                                    <span class="mm-text">{% blocktrans %}Media{% endblocktrans %}</span>
+                                </a>
+
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav class="offcanvas-navigation user-setting_area">
+                        <ul class="mobile-menu">
+                            <li class="menu-item-has-children">
+                                <a>
+                                    <span class="mm-text">{% blocktrans %}Tillar{% endblocktrans %}</span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <form action="{% url 'set_language' %}" method="post" class="language-form">
+                                            {% csrf_token %}
+                                            <input name="next" type="hidden" value="{{ redirect_to }}">
+                                            <select name="language" onchange="this.form.submit()">
+                                                {% get_current_language as LANGUAGE_CODE %}
+                                                {% get_available_languages as LANGUAGES %}
+                                                {% get_language_info_list for LANGUAGES as languages %}
+                                                {% for language in languages %}
+                                                    <option value="{{ language.code }}"
+                                                            {% if language.code == LANGUAGE_CODE %}selected{% endif %}>
+                                                        {{ language.name_local }} ({{ language.code }})
+                                                    </option>
+                                                {% endfor %}
+                                            </select>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Uren's Header Main Area End Here -->
+
+    <!-- Begin Uren's Breadcrumb Area -->
+    <div class="breadcrumb-area">
+        <div class="container">
+            <div class="breadcrumb-content">
+                <h2>{% blocktrans %}Maxsulotlar{% endblocktrans %}</h2>
+                <ul>
+                    <li><a href="{% url 'home' %}">{% blocktrans %}Bosh Sahifa{% endblocktrans %}</a></li>
+                    <li class="active">{% blocktrans %}Maxsulot{% endblocktrans %}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Uren's Breadcrumb Area End Here -->
+
+    <!-- Begin Uren's Single Product Area -->
+    <div class="sp-area">
+        <div class="container-fluid">
+            <div class="sp-nav">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="sp-img_area">
+                            <div class="sp-img_slider slick-img-slider uren-slick-slider" data-slick-options='{
                                 "slidesToShow": 1,
                                 "arrows": false,
                                 "fade": true,
@@ -298,11 +311,12 @@
                                 "swipe": false,
                                 "asNavFor": ".sp-img_slider-nav"
                                 }'>
-                                    <div class="single-slide red zoom">
-                                        <img src="{{product.image.url}}" alt="Product Image">
-                                    </div>
+                                <div class="single-slide red zoom">
+                                    <img src="{{ product.image.url }}" alt="Product Image">
                                 </div>
-                                <div class="sp-img_slider-nav slick-slider-nav uren-slick-slider slider-navigation_style-3" data-slick-options='{
+                            </div>
+                            <div class="sp-img_slider-nav slick-slider-nav uren-slick-slider slider-navigation_style-3"
+                                 data-slick-options='{
                                 "slidesToShow": 3,
                                 "asNavFor": ".sp-img_slider",
                                 "focusOnSelect": true,
@@ -314,147 +328,155 @@
                                         {"breakpoint":768, "settings": {"slidesToShow": 3}},
                                         {"breakpoint":575, "settings": {"slidesToShow": 2}}
                                     ]'>
-                                    {% for pro in products %}
+                                {% for pro in products %}
                                     <div class="single-slide red">
-                                        <img src="{{pro.image.url}}" alt="Product Thumnail">
+                                        <img src="{{ pro.image.url }}" alt="Product Thumnail">
                                     </div>
-                                    {% endfor %}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="sp-content">
-                                <div class="sp-heading">
-                                    <h5><a href="#">{{product.name}}</a></h5>
-                                </div>
-                                <div class="sp-essential_stuff">
-                                    <ul>
-                                        <li>Kategoriya: <a href="{% url 'product' %}?c={{product.category}}">{{product.category}}</a></li>
-                                        <li>Turi: <a href="javascript:void(0)">{{product.get_types_display}}</a></li>
-                                        {% if product.types == 1 %}
-                                        <li>Og'irligi: <a href="javascript:void(0)">{{product.size}}</a></li>
-                                        {% else %}
-                                        <li>O'lchami: <a href="javascript:void(0)">{{product.size}}</a></li>
-                                        {% endif %}
-                                        <li>Sana: <a href="javascript:void(0)">{{product.created_at}}</a></li>
-                                    </ul>
-                                </div>
-                                <div class="qty-btn_area">
-                                    <ul>
-                                        <li><a class="qty-cart_btn" href="{% url 'product' %}">Barcha Mahsulotlar</a></li>
-                                    </ul>
-                                </div>
-                                <div class="uren-tag-line">
-                                    <h6>Ranglar:</h6>
-                                    {% for pro in product.color.all %}
-                                    <a href="javascript:void(0)">{{pro.name}}</a>,
-                                    {% endfor %}
-                                </div>
-                                <div class="uren-social_link">
-                                    <ul>
-                                        <li class="facebook">
-                                            <a href="https://www.facebook.com/" data-toggle="tooltip" target="_blank" title="Facebook">
-                                                <i class="fab fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li class="twitter">
-                                            <a href="https://twitter.com/" data-toggle="tooltip" target="_blank" title="Twitter">
-                                                <i class="fab fa-twitter-square"></i>
-                                            </a>
-                                        </li>
-                                        <li class="youtube">
-                                            <a href="https://www.youtube.com/" data-toggle="tooltip" target="_blank" title="Youtube">
-                                                <i class="fab fa-youtube"></i>
-                                            </a>
-                                        </li>
-                                        <li class="google-plus">
-                                            <a href="https://www.plus.google.com/discover" data-toggle="tooltip" target="_blank" title="Google Plus">
-                                                <i class="fab fa-google-plus"></i>
-                                            </a>
-                                        </li>
-                                        <li class="instagram">
-                                            <a href="https://rss.com/" data-toggle="tooltip" target="_blank" title="Instagram">
-                                                <i class="fab fa-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- Uren's Single Product Area End Here -->
-
-        <!-- Begin Uren's Single Product Tab Area -->
-        <div class="sp-product-tab_area">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="sp-product-tab_nav">
-                            <div class="product-tab">
-                                <ul class="nav product-menu">
-                                    <li><a class="active" data-toggle="tab" href="#description"><span>Description</span></a>
+                    <div class="col-lg-8">
+                        <div class="sp-content">
+                            <div class="sp-heading">
+                                <h5><a href="#">{{ product.name }}</a></h5>
+                            </div>
+                            <div class="sp-essential_stuff">
+                                <ul>
+                                    <li>Kategoriya: <a
+                                            href="{% url 'product' %}?c={{ product.category }}">{{ product.category }}</a>
+                                    </li>
+                                    <li>Turi: <a href="javascript:void(0)">{{ product.get_types_display }}</a></li>
+                                    {% if product.types == 1 %}
+                                        <li>Og'irligi: <a href="javascript:void(0)">{{ product.size }}</a></li>
+                                    {% else %}
+                                        <li>O'lchami: <a href="javascript:void(0)">{{ product.size }}</a></li>
+                                    {% endif %}
+                                    <li>Sana: <a href="javascript:void(0)">{{ product.created_at }}</a></li>
+                                </ul>
+                            </div>
+                            <div class="qty-btn_area">
+                                <ul>
+                                    <li><a class="qty-cart_btn" href="{% url 'product' %}">{% blocktrans %}Barcha Mahsulotlar{% endblocktrans %}</a></li>
+                                </ul>
+                            </div>
+                            <div class="uren-tag-line">
+                                <h6>Ranglar:</h6>
+                                {% for pro in product.color.all %}
+                                    <a href="javascript:void(0)">{{ pro.name }}</a>,
+                                {% endfor %}
+                            </div>
+                            <div class="uren-social_link">
+                                <ul>
+                                    <li class="facebook">
+                                        <a href="https://www.facebook.com/" data-toggle="tooltip" target="_blank"
+                                           title="Facebook">
+                                            <i class="fab fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li class="twitter">
+                                        <a href="https://twitter.com/" data-toggle="tooltip" target="_blank"
+                                           title="Twitter">
+                                            <i class="fab fa-twitter-square"></i>
+                                        </a>
+                                    </li>
+                                    <li class="youtube">
+                                        <a href="https://www.youtube.com/" data-toggle="tooltip" target="_blank"
+                                           title="Youtube">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </li>
+                                    <li class="google-plus">
+                                        <a href="https://www.plus.google.com/discover" data-toggle="tooltip"
+                                           target="_blank" title="Google Plus">
+                                            <i class="fab fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                    <li class="instagram">
+                                        <a href="https://rss.com/" data-toggle="tooltip" target="_blank"
+                                           title="Instagram">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="tab-content uren-tab_content">
-                                <div id="description" class="tab-pane active show" role="tabpanel">
-                                    <div class="product-description">
-                                        <ul>
-                                            <li>
-                                                <strong>{{product.name}}</strong>
-                                                <span>{{product.description}}</span>
-                                            </li>
-                                            
-                                        </ul>
-                                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Uren's Single Product Area End Here -->
+
+    <!-- Begin Uren's Single Product Tab Area -->
+    <div class="sp-product-tab_area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="sp-product-tab_nav">
+                        <div class="product-tab">
+                            <ul class="nav product-menu">
+                                <li><a class="active" data-toggle="tab" href="#description"><span>{% blocktrans %}Maxsulot Haqida{% endblocktrans %}</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content uren-tab_content">
+                            <div id="description" class="tab-pane active show" role="tabpanel">
+                                <div class="product-description">
+                                    <ul>
+                                        <li>
+                                            <strong>{{ product.name }}</strong>
+                                            <span>{{ product.description }}</span>
+                                        </li>
+
+                                    </ul>
                                 </div>
-                                <div id="specification" class="tab-pane" role="tabpanel">
-                                    <table class="table table-bordered specification-inner_stuff">
-                                        <tbody>
-                                            <tr>
-                                                <td colspan="2"><strong>Memory</strong></td>
-                                            </tr>
-                                        </tbody>
-                                        <tbody>
-                                            <tr>
-                                                <td>test 1</td>
-                                                <td>8gb</td>
-                                            </tr>
-                                        </tbody>
-                                        <tbody>
-                                            <tr>
-                                                <td colspan="2"><strong>Processor</strong></td>
-                                            </tr>
-                                        </tbody>
-                                        <tbody>
-                                            <tr>
-                                                <td>No. of Cores</td>
-                                                <td>1</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                            </div>
+                            <div id="specification" class="tab-pane" role="tabpanel">
+                                <table class="table table-bordered specification-inner_stuff">
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2"><strong>Memory</strong></td>
+                                    </tr>
+                                    </tbody>
+                                    <tbody>
+                                    <tr>
+                                        <td>test 1</td>
+                                        <td>8gb</td>
+                                    </tr>
+                                    </tbody>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2"><strong>Processor</strong></td>
+                                    </tr>
+                                    </tbody>
+                                    <tbody>
+                                    <tr>
+                                        <td>No. of Cores</td>
+                                        <td>1</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Uren's Single Product Tab Area End Here -->
+    </div>
+    <!-- Uren's Single Product Tab Area End Here -->
 
-        <!-- Begin Uren's Product Area -->
-        <div class="uren-product_area">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-title_area">
-                            <span></span>
-                            <h3>Shunga O'xshash Maxsulotlar</h3>
-                        </div>
-                        <div class="product-slider uren-slick-slider slider-navigation_style-1 img-hover-effect_area" data-slick-options='{
+    <!-- Begin Uren's Product Area -->
+    <div class="uren-product_area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title_area">
+                        <span></span>
+                        <h3>{% blocktrans %}Shunga O'xshash Maxsulotlar{% endblocktrans %}</h3>
+                    </div>
+                    <div class="product-slider uren-slick-slider slider-navigation_style-1 img-hover-effect_area"
+                         data-slick-options='{
                         "slidesToShow": 6,
                         "arrows" : true
                         }' data-slick-responsive='[
@@ -464,120 +486,125 @@
                                                 {"breakpoint":767, "settings": {"slidesToShow": 1}},
                                                 {"breakpoint":480, "settings": {"slidesToShow": 1}}
                                             ]'>
-                            {% for pro in products %}
+                        {% for pro in products %}
                             <div class="product-slide_item">
                                 <div class="inner-slide">
                                     <div class="single-product">
                                         <div class="product-img">
-                                            <a href="{% url 'product' %}{{pro.id}}">
-                                                <img class="primary-img" src="{{pro.image.url}}" alt="Product Image">
+                                            <a href="{% url 'product' %}{{ pro.id }}">
+                                                <img class="primary-img" src="{{ pro.image.url }}" alt="Product Image">
                                             </a>
                                             <div class="sticker">
-                                                <span class="sticker">New</span>
+                                                <span class="sticker">Yangi</span>
                                             </div>
                                             <div class="add-actions">
                                                 <ul>
-                                                    <li><a class="uren-add_cart" href="{% url 'product' %}{{pro.id}}" data-toggle="list" data-placement="top" title="Barcha Mahsulotlar"><i class="ion-bag"></i></a>
+                                                    <li><a class="uren-add_cart" href="{% url 'product' %}{{ pro.id }}"
+                                                           data-toggle="list" data-placement="top"
+                                                           title="{% blocktrans %}Barcha Mahsulotlar{% endblocktrans %}"><i class="ion-bag"></i></a>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <div class="product-content">
                                             <div class="product-desc_info">
-                                                <h6><a class="product-name" href="{% url 'product' %}{{pro.id}}">{{pro.name}}</a></h6>
+                                                <h6><a class="product-name"
+                                                       href="{% url 'product' %}{{ pro.id }}">{{ pro.name }}</a></h6>
                                                 <div class="price-box">
-                                                    <span class="new-price">{{pro.created_at|date}}</span>
+                                                    <span class="new-price">{{ pro.created_at|date }}</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            {% endfor %}
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Begin Uren's Footer Area -->
-        <div class="uren-footer_area">
-            <div class="container-fluid">
+    <!-- Begin Uren's Footer Area -->
+    <div class="uren-footer_area">
+        <div class="container-fluid">
             <div id="google-map"></div>
         </div>
-            
-            <div class="footer-middle_area">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="footer-widgets_info">
-                                <div class="footer-widgets_logo">
-                                    <a href="{% url 'home' %}">
-                                        <img src="{% static 'images/menu/logo/1.png' %}" alt="Uren's Footer Logo">
-                                    </a>
-                                </div>
-                                <div class="widget-short_desc">
-                                    <p>Kompaniyamiz 20 yillik tajriba va malakaga ega bo'lib, yuqori sifatli Polietilen
-                                    plyonka ishlab chiqarish sohasida taniqliroq bo'lib kelmoqda. Bizning maqsadimiz
-                                    mijozlarimizga qulay va innovatsion mahsulotlar taqdim etishdir.
 
-         
-                                    </p>
-                                </div>
-                                <div class="widgets-essential_stuff">
-                                    <ul>
-                                        <li class="uren-address"><span>Manzil:</span>Toshkent Viloyati Zangiota Tumani
-                                        Navqiron MFY, Markaz Shox, pr. 9 ko'chasi, 43-uy</li>
-                                        <li class="uren-phone"><span>Telefon
-                                        :</span> <a href="tel://+123123321345">+123 321 345</a>
-                                        </li>
-                                        <li class="uren-email"><span>Email:</span> <a href="mailto:msplast.uz@gmail.com">msplast.uz@gmail.com</a>
+        <div class="footer-middle_area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="footer-widgets_info">
+                            <div class="footer-widgets_logo">
+                                <a href="{% url 'home' %}">
+                                    <img src="{% static 'images/menu/logo/1.png' %}" alt="Uren's Footer Logo">
+                                </a>
+                            </div>
+                            <div class="widget-short_desc">
+                                <p>{% blocktrans %}Kompaniyamiz 20 yillik tajriba va malakaga ega bo'lib, yuqori sifatli Polietilen plyonka ishlab chiqarish sohasida taniqliroq bo'lib kelmoqda. Bizning maqsadimiz mijozlarimizga qulay va innovatsion mahsulotlar taqdim etishdir.{% endblocktrans %}
+
+
+                                </p>
+                            </div>
+                            <div class="widgets-essential_stuff">
+                                <ul>
+                                    <li class="uren-address"><span>{% blocktrans %}Manzil{% endblocktrans %}:</span>{% blocktrans %}Toshkent Viloyati Zangiota Tumani Navqiron MFY, Markaz Shox, pr. 9 ko'chasi, 43-uy{% endblocktrans %}
                                     </li>
-                                    </ul>
-                                </div>
-                                <div class="uren-social_link">
-                                    <ul>
-                                        <li class="facebook">
-                                            <a href="https://www.facebook.com/" data-toggle="tooltip" target="_blank" title="Facebook">
-                                                <i class="fab fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li class="twitter">
-                                            <a href="https://twitter.com/" data-toggle="tooltip" target="_blank" title="Twitter">
-                                                <i class="fab fa-twitter-square"></i>
-                                            </a>
-                                        </li>
-                                        <li class="google-plus">
-                                            <a href="https://www.plus.google.com/discover" data-toggle="tooltip" target="_blank" title="Google Plus">
-                                                <i class="fab fa-google-plus"></i>
-                                            </a>
-                                        </li>
-                                        <li class="instagram">
-                                            <a href="https://rss.com/" data-toggle="tooltip" target="_blank" title="Instagram">
-                                                <i class="fab fa-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                    <li class="uren-phone"><span>{% blocktrans %}Telefon{% endblocktrans %}
+                                        :</span> <a href="tel://+123123321345">+123 321 345</a>
+                                    </li>
+                                    <li class="uren-email"><span>Email:</span> <a href="mailto:msplast.uz@gmail.com">msplast.uz@gmail.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="uren-social_link">
+                                <ul>
+                                    <li class="facebook">
+                                        <a href="https://www.facebook.com/" data-toggle="tooltip" target="_blank"
+                                           title="Facebook">
+                                            <i class="fab fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li class="twitter">
+                                        <a href="https://twitter.com/" data-toggle="tooltip" target="_blank"
+                                           title="Twitter">
+                                            <i class="fab fa-twitter-square"></i>
+                                        </a>
+                                    </li>
+                                    <li class="google-plus">
+                                        <a href="https://www.plus.google.com/discover" data-toggle="tooltip"
+                                           target="_blank" title="Google Plus">
+                                            <i class="fab fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                    <li class="instagram">
+                                        <a href="https://rss.com/" data-toggle="tooltip" target="_blank"
+                                           title="Instagram">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Uren's Footer Area End Here -->
-        <!-- Begin Uren's Modal Area -->
-        <div class="modal fade modal-wrapper" id="exampleModalCenter">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <div class="modal-inner-area sp-area row">
-                            <div class="col-lg-5">
-                                <div class="sp-img_area">
-                                    <div class="sp-img_slider slick-img-slider uren-slick-slider" data-slick-options='{
+    </div>
+    <!-- Uren's Footer Area End Here -->
+    <!-- Begin Uren's Modal Area -->
+    <div class="modal fade modal-wrapper" id="exampleModalCenter">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="modal-inner-area sp-area row">
+                        <div class="col-lg-5">
+                            <div class="sp-img_area">
+                                <div class="sp-img_slider slick-img-slider uren-slick-slider" data-slick-options='{
                                     "slidesToShow": 1,
                                     "arrows": false,
                                     "fade": true,
@@ -585,26 +612,33 @@
                                     "swipe": false,
                                     "asNavFor": ".sp-img_slider-nav"
                                     }'>
-                                        <div class="single-slide red">
-                                            <img src="{% static 'images/product/large-size/1.jpg' %}" alt="Uren's Product Image">
-                                        </div>
-                                        <div class="single-slide orange">
-                                            <img src="{% static 'images/product/large-size/2.jpg' %}" alt="Uren's Product Image">
-                                        </div>
-                                        <div class="single-slide brown">
-                                            <img src="{% static 'images/product/large-size/3.jpg' %}" alt="Uren's Product Image">
-                                        </div>
-                                        <div class="single-slide umber">
-                                            <img src="{% static 'images/product/large-size/4.jpg' %}" alt="Uren's Product Image">
-                                        </div>
-                                        <div class="single-slide black">
-                                            <img src="{% static 'images/product/large-size/5.jpg' %}" alt="Uren's Product Image">
-                                        </div>
-                                        <div class="single-slide golden">
-                                            <img src="{% static 'images/product/large-size/6.jpg' %}" alt="Uren's Product Image">
-                                        </div>
+                                    <div class="single-slide red">
+                                        <img src="{% static 'images/product/large-size/1.jpg' %}"
+                                             alt="Uren's Product Image">
                                     </div>
-                                    <div class="sp-img_slider-nav slick-slider-nav uren-slick-slider slider-navigation_style-3" data-slick-options='{
+                                    <div class="single-slide orange">
+                                        <img src="{% static 'images/product/large-size/2.jpg' %}"
+                                             alt="Uren's Product Image">
+                                    </div>
+                                    <div class="single-slide brown">
+                                        <img src="{% static 'images/product/large-size/3.jpg' %}"
+                                             alt="Uren's Product Image">
+                                    </div>
+                                    <div class="single-slide umber">
+                                        <img src="{% static 'images/product/large-size/4.jpg' %}"
+                                             alt="Uren's Product Image">
+                                    </div>
+                                    <div class="single-slide black">
+                                        <img src="{% static 'images/product/large-size/5.jpg' %}"
+                                             alt="Uren's Product Image">
+                                    </div>
+                                    <div class="single-slide golden">
+                                        <img src="{% static 'images/product/large-size/6.jpg' %}"
+                                             alt="Uren's Product Image">
+                                    </div>
+                                </div>
+                                <div class="sp-img_slider-nav slick-slider-nav uren-slick-slider slider-navigation_style-3"
+                                     data-slick-options='{
                                    "slidesToShow": 4,
                                     "asNavFor": ".sp-img_slider",
                                    "focusOnSelect": true,
@@ -616,137 +650,148 @@
                                     {"breakpoint":768, "settings": {"slidesToShow": 3}},
                                     {"breakpoint":575, "settings": {"slidesToShow": 2}}
                                 ]'>
-                                        <div class="single-slide red">
-                                            <img src="{% static 'images/product/small-size/1.jpg' %}" alt="Uren's Product Thumnail">
-                                        </div>
-                                        <div class="single-slide orange">
-                                            <img src="{% static 'images/product/small-size/2.jpg' %}" alt="Uren's Product Thumnail">
-                                        </div>
-                                        <div class="single-slide brown">
-                                            <img src="{% static 'images/product/small-size/3.jpg' %}" alt="Uren's Product Thumnail">
-                                        </div>
-                                        <div class="single-slide umber">
-                                            <img src="{% static 'images/product/small-size/4.jpg' %}" alt="Uren's Product Thumnail">
-                                        </div>
-                                        <div class="single-slide black">
-                                            <img src="{% static 'images/product/small-size/5.jpg' %}" alt="Uren's Product Thumnail">
-                                        </div>
-                                        <div class="single-slide golden">
-                                            <img src="{% static 'images/product/small-size/6.jpg' %}" alt="Uren's Product Thumnail">
-                                        </div>
+                                    <div class="single-slide red">
+                                        <img src="{% static 'images/product/small-size/1.jpg' %}"
+                                             alt="Uren's Product Thumnail">
+                                    </div>
+                                    <div class="single-slide orange">
+                                        <img src="{% static 'images/product/small-size/2.jpg' %}"
+                                             alt="Uren's Product Thumnail">
+                                    </div>
+                                    <div class="single-slide brown">
+                                        <img src="{% static 'images/product/small-size/3.jpg' %}"
+                                             alt="Uren's Product Thumnail">
+                                    </div>
+                                    <div class="single-slide umber">
+                                        <img src="{% static 'images/product/small-size/4.jpg' %}"
+                                             alt="Uren's Product Thumnail">
+                                    </div>
+                                    <div class="single-slide black">
+                                        <img src="{% static 'images/product/small-size/5.jpg' %}"
+                                             alt="Uren's Product Thumnail">
+                                    </div>
+                                    <div class="single-slide golden">
+                                        <img src="{% static 'images/product/small-size/6.jpg' %}"
+                                             alt="Uren's Product Thumnail">
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-7 col-lg-6">
-                                <div class="sp-content">
-                                    <div class="sp-heading">
-                                        <h5><a href="#">Dolorem odio provident ut nihil</a></h5>
+                        </div>
+                        <div class="col-xl-7 col-lg-6">
+                            <div class="sp-content">
+                                <div class="sp-heading">
+                                    <h5><a href="#">Dolorem odio provident ut nihil</a></h5>
+                                </div>
+                                <div class="rating-box">
+                                    <ul>
+                                        <li><i class="ion-android-star"></i></li>
+                                        <li><i class="ion-android-star"></i></li>
+                                        <li><i class="ion-android-star"></i></li>
+                                        <li class="silver-color"><i class="ion-android-star"></i></li>
+                                        <li class="silver-color"><i class="ion-android-star"></i></li>
+                                    </ul>
+                                </div>
+                                <div class="price-box">
+                                    <span class="new-price new-price-2">$194.00</span>
+                                    <span class="old-price">$241.00</span>
+                                </div>
+                                <div class="sp-essential_stuff">
+                                    <ul>
+                                        <li>Brands <a href="javascript:void(0)">Buxton</a></li>
+                                        <li>Product Code: <a href="javascript:void(0)">Product 16</a></li>
+                                        <li>Reward Points: <a href="javascript:void(0)">100</a></li>
+                                        <li>Availability: <a href="javascript:void(0)">In Stock</a></li>
+                                        <li>EX Tax: <a href="javascript:void(0)"><span>$453.35</span></a></li>
+                                        <li>Price in reward points: <a href="javascript:void(0)">400</a></li>
+                                    </ul>
+                                </div>
+                                <div class="color-list_area">
+                                    <div class="color-list_heading">
+                                        <h4>Available Options</h4>
                                     </div>
-                                    <div class="rating-box">
-                                        <ul>
-                                            <li><i class="ion-android-star"></i></li>
-                                            <li><i class="ion-android-star"></i></li>
-                                            <li><i class="ion-android-star"></i></li>
-                                            <li class="silver-color"><i class="ion-android-star"></i></li>
-                                            <li class="silver-color"><i class="ion-android-star"></i></li>
-                                        </ul>
+                                    <span class="sub-title">Color</span>
+                                    <div class="color-list">
+                                        <a href="javascript:void(0)" class="single-color active"
+                                           data-swatch-color="red">
+                                            <span class="bg-red_color"></span>
+                                            <span class="color-text">Red (+$150)</span>
+                                        </a>
+                                        <a href="javascript:void(0)" class="single-color" data-swatch-color="orange">
+                                            <span class="burnt-orange_color"></span>
+                                            <span class="color-text">Orange (+$170)</span>
+                                        </a>
+                                        <a href="javascript:void(0)" class="single-color" data-swatch-color="brown">
+                                            <span class="brown_color"></span>
+                                            <span class="color-text">Brown (+$120)</span>
+                                        </a>
+                                        <a href="javascript:void(0)" class="single-color" data-swatch-color="umber">
+                                            <span class="raw-umber_color"></span>
+                                            <span class="color-text">Umber (+$125)</span>
+                                        </a>
+                                        <a href="javascript:void(0)" class="single-color" data-swatch-color="black">
+                                            <span class="black_color"></span>
+                                            <span class="color-text">Black (+$125)</span>
+                                        </a>
+                                        <a href="javascript:void(0)" class="single-color" data-swatch-color="golden">
+                                            <span class="golden_color"></span>
+                                            <span class="color-text">Golden (+$125)</span>
+                                        </a>
                                     </div>
-                                    <div class="price-box">
-                                        <span class="new-price new-price-2">$194.00</span>
-                                        <span class="old-price">$241.00</span>
+                                </div>
+                                <div class="quantity">
+                                    <label>Quantity</label>
+                                    <div class="cart-plus-minus">
+                                        <input class="cart-plus-minus-box" value="1" type="text">
+                                        <div class="dec qtybutton"><i class="fa fa-angle-down"></i></div>
+                                        <div class="inc qtybutton"><i class="fa fa-angle-up"></i></div>
                                     </div>
-                                    <div class="sp-essential_stuff">
-                                        <ul>
-                                            <li>Brands <a href="javascript:void(0)">Buxton</a></li>
-                                            <li>Product Code: <a href="javascript:void(0)">Product 16</a></li>
-                                            <li>Reward Points: <a href="javascript:void(0)">100</a></li>
-                                            <li>Availability: <a href="javascript:void(0)">In Stock</a></li>
-                                            <li>EX Tax: <a href="javascript:void(0)"><span>$453.35</span></a></li>
-                                            <li>Price in reward points: <a href="javascript:void(0)">400</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="color-list_area">
-                                        <div class="color-list_heading">
-                                            <h4>Available Options</h4>
-                                        </div>
-                                        <span class="sub-title">Color</span>
-                                        <div class="color-list">
-                                            <a href="javascript:void(0)" class="single-color active" data-swatch-color="red">
-                                                <span class="bg-red_color"></span>
-                                                <span class="color-text">Red (+$150)</span>
+                                </div>
+                                <div class="uren-group_btn">
+                                    <ul>
+                                        <li><a href="cart.html" class="add-to_cart">Cart To Cart</a></li>
+                                        <li><a href="cart.html"><i class="ion-android-favorite-outline"></i></a></li>
+                                        <li><a href="cart.html"><i class="ion-ios-shuffle-strong"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="uren-tag-line">
+                                    <h6>Tags:</h6>
+                                    <a href="javascript:void(0)">Ring</a>,
+                                    <a href="javascript:void(0)">Necklaces</a>,
+                                    <a href="javascript:void(0)">Braid</a>
+                                </div>
+                                <div class="uren-social_link">
+                                    <ul>
+                                        <li class="facebook">
+                                            <a href="https://www.facebook.com/" data-toggle="tooltip" target="_blank"
+                                               title="Facebook">
+                                                <i class="fab fa-facebook"></i>
                                             </a>
-                                            <a href="javascript:void(0)" class="single-color" data-swatch-color="orange">
-                                                <span class="burnt-orange_color"></span>
-                                                <span class="color-text">Orange (+$170)</span>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="https://twitter.com/" data-toggle="tooltip" target="_blank"
+                                               title="Twitter">
+                                                <i class="fab fa-twitter-square"></i>
                                             </a>
-                                            <a href="javascript:void(0)" class="single-color" data-swatch-color="brown">
-                                                <span class="brown_color"></span>
-                                                <span class="color-text">Brown (+$120)</span>
+                                        </li>
+                                        <li class="youtube">
+                                            <a href="https://www.youtube.com/" data-toggle="tooltip" target="_blank"
+                                               title="Youtube">
+                                                <i class="fab fa-youtube"></i>
                                             </a>
-                                            <a href="javascript:void(0)" class="single-color" data-swatch-color="umber">
-                                                <span class="raw-umber_color"></span>
-                                                <span class="color-text">Umber (+$125)</span>
+                                        </li>
+                                        <li class="google-plus">
+                                            <a href="https://www.plus.google.com/discover" data-toggle="tooltip"
+                                               target="_blank" title="Google Plus">
+                                                <i class="fab fa-google-plus"></i>
                                             </a>
-                                            <a href="javascript:void(0)" class="single-color" data-swatch-color="black">
-                                                <span class="black_color"></span>
-                                                <span class="color-text">Black (+$125)</span>
+                                        </li>
+                                        <li class="instagram">
+                                            <a href="https://rss.com/" data-toggle="tooltip" target="_blank"
+                                               title="Instagram">
+                                                <i class="fab fa-instagram"></i>
                                             </a>
-                                            <a href="javascript:void(0)" class="single-color" data-swatch-color="golden">
-                                                <span class="golden_color"></span>
-                                                <span class="color-text">Golden (+$125)</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="quantity">
-                                        <label>Quantity</label>
-                                        <div class="cart-plus-minus">
-                                            <input class="cart-plus-minus-box" value="1" type="text">
-                                            <div class="dec qtybutton"><i class="fa fa-angle-down"></i></div>
-                                            <div class="inc qtybutton"><i class="fa fa-angle-up"></i></div>
-                                        </div>
-                                    </div>
-                                    <div class="uren-group_btn">
-                                        <ul>
-                                            <li><a href="cart.html" class="add-to_cart">Cart To Cart</a></li>
-                                            <li><a href="cart.html"><i class="ion-android-favorite-outline"></i></a></li>
-                                            <li><a href="cart.html"><i class="ion-ios-shuffle-strong"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="uren-tag-line">
-                                        <h6>Tags:</h6>
-                                        <a href="javascript:void(0)">Ring</a>,
-                                        <a href="javascript:void(0)">Necklaces</a>,
-                                        <a href="javascript:void(0)">Braid</a>
-                                    </div>
-                                    <div class="uren-social_link">
-                                        <ul>
-                                            <li class="facebook">
-                                                <a href="https://www.facebook.com/" data-toggle="tooltip" target="_blank" title="Facebook">
-                                                    <i class="fab fa-facebook"></i>
-                                                </a>
-                                            </li>
-                                            <li class="twitter">
-                                                <a href="https://twitter.com/" data-toggle="tooltip" target="_blank" title="Twitter">
-                                                    <i class="fab fa-twitter-square"></i>
-                                                </a>
-                                            </li>
-                                            <li class="youtube">
-                                                <a href="https://www.youtube.com/" data-toggle="tooltip" target="_blank" title="Youtube">
-                                                    <i class="fab fa-youtube"></i>
-                                                </a>
-                                            </li>
-                                            <li class="google-plus">
-                                                <a href="https://www.plus.google.com/discover" data-toggle="tooltip" target="_blank" title="Google Plus">
-                                                    <i class="fab fa-google-plus"></i>
-                                                </a>
-                                            </li>
-                                            <li class="instagram">
-                                                <a href="https://rss.com/" data-toggle="tooltip" target="_blank" title="Instagram">
-                                                    <i class="fab fa-instagram"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -754,48 +799,49 @@
                 </div>
             </div>
         </div>
-        <!-- Uren's Modal Area End Here -->
     </div>
+    <!-- Uren's Modal Area End Here -->
+</div>
 
-    <!-- JS
+<!-- JS
 ============================================ -->
 
-    <!-- jQuery JS -->
-    <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
-    <!-- Modernizer JS -->
-    <script src="{% static 'js/vendor/modernizr-2.8.3.min.js' %}"></script>
-    <!-- Popper JS -->
-    <script src="{% static 'js/vendor/popper.min.js' %}"></script>
-    <!-- Bootstrap JS -->
-    <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+<!-- jQuery JS -->
+<script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+<!-- Modernizer JS -->
+<script src="{% static 'js/vendor/modernizr-2.8.3.min.js' %}"></script>
+<!-- Popper JS -->
+<script src="{% static 'js/vendor/popper.min.js' %}"></script>
+<!-- Bootstrap JS -->
+<script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
 
-    <!-- Slick Slider JS -->
-    <script src="{% static 'js/plugins/slick.min.js' %}"></script>
-    <!-- Barrating JS -->
-    <script src="{% static 'js/plugins/jquery.barrating.min.js' %}"></script>
-    <!-- Counterup JS -->
-    <script src="{% static 'js/plugins/jquery.counterup.js' %}"></script>
-    <!-- Nice Select JS -->
-    <script src="{% static 'js/plugins/jquery.nice-select.js' %}"></script>
-    <!-- Sticky Sidebar JS -->
-    <script src="{% static 'js/plugins/jquery.sticky-sidebar.js' %}"></script>
-    <!-- Jquery-ui JS -->
-    <script src="{% static 'js/plugins/jquery-ui.min.js' %}"></script>
-    <script src="{% static 'js/plugins/jquery.ui.touch-punch.min.js' %}"></script>
-    <!-- Lightgallery JS -->
-    <script src="{% static 'js/plugins/lightgallery.min.js' %}"></script>
-    <!-- Scroll Top JS -->
-    <script src="{% static 'js/plugins/scroll-top.js' %}"></script>
-    <!-- Theia Sticky Sidebar JS -->
-    <script src="{% static 'js/plugins/theia-sticky-sidebar.min.js' %}"></script>
-    <!-- Waypoints JS -->
-    <script src="{% static 'js/plugins/waypoints.min.js' %}"></script>
-    <!-- jQuery Zoom JS -->
-    <script src="{% static 'js/plugins/jquery.zoom.min.js' %}"></script>
+<!-- Slick Slider JS -->
+<script src="{% static 'js/plugins/slick.min.js' %}"></script>
+<!-- Barrating JS -->
+<script src="{% static 'js/plugins/jquery.barrating.min.js' %}"></script>
+<!-- Counterup JS -->
+<script src="{% static 'js/plugins/jquery.counterup.js' %}"></script>
+<!-- Nice Select JS -->
+<script src="{% static 'js/plugins/jquery.nice-select.js' %}"></script>
+<!-- Sticky Sidebar JS -->
+<script src="{% static 'js/plugins/jquery.sticky-sidebar.js' %}"></script>
+<!-- Jquery-ui JS -->
+<script src="{% static 'js/plugins/jquery-ui.min.js' %}"></script>
+<script src="{% static 'js/plugins/jquery.ui.touch-punch.min.js' %}"></script>
+<!-- Lightgallery JS -->
+<script src="{% static 'js/plugins/lightgallery.min.js' %}"></script>
+<!-- Scroll Top JS -->
+<script src="{% static 'js/plugins/scroll-top.js' %}"></script>
+<!-- Theia Sticky Sidebar JS -->
+<script src="{% static 'js/plugins/theia-sticky-sidebar.min.js' %}"></script>
+<!-- Waypoints JS -->
+<script src="{% static 'js/plugins/waypoints.min.js' %}"></script>
+<!-- jQuery Zoom JS -->
+<script src="{% static 'js/plugins/jquery.zoom.min.js' %}"></script>
 
 
-    <!-- Main JS -->
-    <script src="{% static 'js/main.js' %}"></script>
+<!-- Main JS -->
+<script src="{% static 'js/main.js' %}"></script>
 
 
 <script src="https://maps.google.com/maps/api/js?sensor=false&amp;libraries=geometry&amp;v=3.22&amp;key=AIzaSyChs2QWiAhnzz0a4OEhzqCXwx_qA9ST_lE"></script>

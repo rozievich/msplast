@@ -690,6 +690,9 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
     transition: all 0.3s ease-in;
 }
 
+
+
+
 /* ---Range Slider--- */
 .price-filter {
     padding-top: 35px;

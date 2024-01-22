@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -54,13 +55,13 @@
                         <div class="main-menu_area position-relative">
                             <nav class="main-nav">
                                 <ul>
-                                    <li class="dropdown-holder "><a href="{% url 'home' %}">Bosh Sahifa</a>
+                                    <li class="dropdown-holder "><a href="{% url 'home' %}">{% blocktrans %}Bosh Sahifa{% endblocktrans %}</a>
                                     </li>
-                                    <li class="megamenu-holder "><a href="{% url 'product' %}">Maxsulot</a>
+                                    <li class="megamenu-holder "><a href="{% url 'product' %}">{% blocktrans %}Maxsulot{% endblocktrans %}</a>
                                     </li>
-                                    <li class=""><a href="{% url 'about' %}">Biz Haqimizda</a></li>
-                                    <li class="active"><a href="{% url 'contact' %}">Bog'lanish</a></li>
-                                    <li class=""><a href="{% url 'media' %}">Media</a>
+                                    <li class=""><a href="{% url 'about' %}">{% blocktrans %}Biz Haqimizda{% endblocktrans %}</a></li>
+                                    <li class="active"><a href="{% url 'contact' %}">{% blocktrans %}Bog'lanish{% endblocktrans %}</a></li>
+                                    <li class=""><a href="{% url 'media' %}">{% blocktrans %}Media{% endblocktrans %}</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -70,14 +71,25 @@
                         <div class="ht-right_area">
                             <div class="ht-menu">
                                 <ul>
-                                    <li><a href="javascript:void(0)">Tillar <i class="fa fa-chevron-down"></i></a>
+                                    <li><a href="javascript:void(0)">{% blocktrans %}Tillar{% endblocktrans %} <i class="fa fa-chevron-down"></i></a>
                                         <ul class="ht-dropdown">
-                                            <li class="active"><a href="javascript:void(0)"><img
-                                                    src="{% static 'images/menu/icon/1.jp' %}" alt="JB's Language Icon">English</a>
-                                            </li>
-                                            <li><a href="javascript:void(0)"><img
-                                                    src="{% static 'images/menu/icon/2.jpg' %}"
-                                                    alt="JB's Language Icon">Français</a>
+                                            <li>
+                                                <form action="{% url 'set_language' %}" method="post"
+                                                      class="language-form">
+                                                    {% csrf_token %}
+                                                    <input name="next" type="hidden" value="{{ redirect_to }}">
+                                                    <select name="language" onchange="this.form.submit()">
+                                                        {% get_current_language as LANGUAGE_CODE %}
+                                                        {% get_available_languages as LANGUAGES %}
+                                                        {% get_language_info_list for LANGUAGES as languages %}
+                                                        {% for language in languages %}
+                                                            <option value="{{ language.code }}"
+                                                                    {% if language.code == LANGUAGE_CODE %}selected{% endif %}>
+                                                                {{ language.name_local }} ({{ language.code }})
+                                                            </option>
+                                                        {% endfor %}
+                                                    </select>
+                                                </form>
                                             </li>
                                         </ul>
                                     </li>
@@ -95,13 +107,13 @@
                         <div class="main-menu_area position-relative">
                             <nav class="main-nav">
                                 <ul>
-                                    <li class="dropdown-holder "><a href="{% url 'home' %}">Bosh Sahifa</a>
+                                    <li class="dropdown-holder "><a href="{% url 'home' %}">{% blocktrans %}Bosh Sahifa{% endblocktrans %}</a>
                                     </li>
-                                    <li class="megamenu-holder "><a href="{% url 'product' %}">Maxsulotlar</a>
+                                    <li class="megamenu-holder "><a href="{% url 'product' %}">{% blocktrans %}Maxsulotlar{% endblocktrans %}</a>
                                     </li>
-                                    <li class=""><a href="{% url 'about' %}">Biz Haqimizda</a></li>
+                                    <li class=""><a href="{% url 'about' %}">{% blocktrans %}Biz Haqimizda{% endblocktrans %}</a></li>
                                     <li class="active"><a href="{% url 'contact' %}">Bog'lanish</a></li>
-                                    <li class=""><a href="{% url 'media' %}">Media<i
+                                    <li class=""><a href="{% url 'media' %}">{% blocktrans %}Media{% endblocktrans %}<i
                                             class="ion-ios-arrow-down"></i></a>
                                     </li>
                                 </ul>
@@ -154,8 +166,8 @@
                         <div class="category-menu category-menu-hidden">
                             <div class="category-heading">
                                 <h2 class="categories-toggle">
-                                    <span>Bizning</span>
-                                    <span>Maxsulotlar</span>
+                                    <span>{% blocktrans %}Bizning{% endblocktrans %}</span>
+                                    <span>{% blocktrans %}Maxsulotlar{% endblocktrans %}</span>
                                 </h2>
                             </div>
                             <div id="cate-toggle" class="category-menu-list">
@@ -171,7 +183,7 @@
                     <div class="custom-search_col col-12">
                         <div class="hm-form_area">
                             <form action="{% url 'product' %}" class="hm-searchbox" method="get">
-                                <input type="text" name="q" placeholder="Maxsulot nomini kiriting...">
+                                <input type="text" name="q" placeholder="{% blocktrans %}Maxsulot nomini kiriting...{% endblocktrans %}">
                                 <button class="header-search_btn" type="submit"><i
                                         class="ion-ios-search-strong"><span>Qidirish</span></i></button>
                             </form>
@@ -215,44 +227,43 @@
                     <nav class="offcanvas-navigation">
                         <ul class="mobile-menu">
                             <li class="menu-item-has-children active"><a href="{% url 'home' %}"><span
-                                    class="mm-text">Bosh Sahifa</span></a>
+                                    class="mm-text">{% blocktrans %}Bosh Sahifa{% endblocktrans %}</span></a>
                             </li>
                             <li class="menu-item-has-children">
                                 <a href="{% url 'product' %}">
-                                    <span class="mm-text">Maxsulotlar</span>
+                                    <span class="mm-text">{% blocktrans %}Maxsulotlar{% endblocktrans %}</span>
                                 </a>
                             </li>
                             <li class="menu-item-has-children">
                                 <a href="{% url 'media' %}">
-                                    <span class="mm-text">Media</span>
+                                    <span class="mm-text">{% blocktrans %}Media{% endblocktrans %}</span>
                                 </a>
                             </li>
                         </ul>
                     </nav>
                     <nav class="offcanvas-navigation user-setting_area">
                         <ul class="mobile-menu">
-                            <li class="menu-item-has-children"><a href="javascript:void(0)"><span
-                                    class="mm-text">Tillar</span></a>
+                            <li class="menu-item-has-children">
+                                <a>
+                                    <span class="mm-text">{% blocktrans %}Tillar{% endblocktrans %}</span>
+                                </a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="javascript:void(0)">
-                                            <span class="mm-text">English</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <span class="mm-text">Français</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <span class="mm-text">Romanian</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <span class="mm-text">Japanese</span>
-                                        </a>
+                                        <form action="{% url 'set_language' %}" method="post" class="language-form">
+                                            {% csrf_token %}
+                                            <input name="next" type="hidden" value="{{ redirect_to }}">
+                                            <select name="language" onchange="this.form.submit()">
+                                                {% get_current_language as LANGUAGE_CODE %}
+                                                {% get_available_languages as LANGUAGES %}
+                                                {% get_language_info_list for LANGUAGES as languages %}
+                                                {% for language in languages %}
+                                                    <option value="{{ language.code }}"
+                                                            {% if language.code == LANGUAGE_CODE %}selected{% endif %}>
+                                                        {{ language.name_local }} ({{ language.code }})
+                                                    </option>
+                                                {% endfor %}
+                                            </select>
+                                        </form>
                                     </li>
                                 </ul>
                             </li>
@@ -268,10 +279,10 @@
     <div class="breadcrumb-area">
         <div class="container">
             <div class="breadcrumb-content">
-                <h2>Bog'lanish</h2>
+                <h2>{% blocktrans %}Bog'lanish{% endblocktrans %}</h2>
                 <ul>
-                    <li><a href="{% url 'home' %}">Bosh Sahifa</a></li>
-                    <li class="active">Kontakt</li>
+                    <li><a href="{% url 'home' %}">{% blocktrans %}Bosh Sahifa{% endblocktrans %}</a></li>
+                    <li class="active">{% blocktrans %}Kontakt{% endblocktrans %}</li>
                 </ul>
             </div>
         </div>
@@ -286,19 +297,19 @@
             <div class="row">
                 <div class="col-lg-5 offset-lg-1 col-md-12 order-1 order-lg-2">
                     <div class="contact-page-side-content">
-                        <h3 class="contact-page-title">Biz bilan bog'lanish</h3>
-                        <p class="contact-page-message">Biz eng yuqori sifatli va bardoshli plyonkalar yaratish uchun ishtiyoq bilan ishlaymiz.</p>
+                        <h3 class="contact-page-title">{% blocktrans %}Biz bilan bog'lanish{% endblocktrans %}</h3>
+                        <p class="contact-page-message">{% blocktrans %}Biz eng yuqori sifatli va bardoshli plyonkalar yaratish uchun ishtiyoq bilan ishlaymiz.{% endblocktrans %}</p>
                         <div class="single-contact-block">
-                            <h4><i class="fa fa-fax"></i> Manzilimiz</h4>
-                            <p>Toshkent Viloyati Zangiota Tumani Navqiron MFY, Markaz Shox, pr. 9 ko'chasi, 43-uy</p>
+                            <h4><i class="fa fa-fax"></i>{% blocktrans %}Manzilimiz{% endblocktrans %}</h4>
+                            <p>{% blocktrans %}Toshkent Viloyati Zangiota Tumani Navqiron MFY, Markaz Shox, pr. 9 ko'chasi, 43-uy{% endblocktrans %}</p>
                         </div>
                         <div class="single-contact-block">
-                            <h4><i class="fa fa-phone"></i> Telefon raqam</h4>
+                            <h4><i class="fa fa-phone"></i>{% blocktrans %}Telefon raqam{% endblocktrans %}</h4>
                             <p>Mobile: (08) 123 456 789</p>
                             <p>Hotline: 1009 678 456</p>
                         </div>
                         <div class="single-contact-block last-child">
-                            <h4><i class="fa fa-envelope-o"></i> Email</h4>
+                            <h4><i class="fa fa-envelope-o"></i>{% blocktrans %}Email{% endblocktrans %}</h4>
                             <p>msplast.uz@gmail.com</p>
 
                         </div>
@@ -306,25 +317,25 @@
                 </div>
                 <div class="col-lg-6 col-md-12 order-2 order-lg-1">
                     <div class="contact-form-content">
-                        <h3 class="contact-page-title">Bizga O'z Xabaringizni Yuboring</h3>
+                        <h3 class="contact-page-title">{% blocktrans %}Bizga O'z Xabaringizni Yuboring{% endblocktrans %}</h3>
                         <div class="contact-form">
                             <form id="contact-form" action="{% url "contact" %}" method="post">
                                 {% csrf_token %}
                                 <div class="form-group">
-                                    <label>Ismingiz <span class="required">*</span></label>
+                                    <label>{% blocktrans %}Ismingiz {% endblocktrans %} <span class="required">*</span></label>
                                     <input type="text" name="fullname" id="con_name" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>Telefon Raqamingiz <span class="required">*</span></label>
-                                    <input type="phone" name="phone" id="con_email" required>
+                                    <label>{% blocktrans %}Telefon Raqamingiz {% endblocktrans %}<span class="required">*</span></label>
+                                    <input type="phone" name="phone" id="con_email" placeholder="+998991234567 Misol" required>
                                 </div>
                                 <div class="form-group form-group-2">
-                                    <label>Sizning Xabaringiz</label>
+                                    <label>{% blocktrans %}Sizning Xabaringiz{% endblocktrans %}</label>
                                     <textarea name="message" id="con_message"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" value="submit" id="submit" class="uren-contact-form_btn"
-                                            name="submit">yuborish
+                                            name="submit">{% blocktrans %}yuborish{% endblocktrans %}
                                     </button>
                                 </div>
                             </form>
@@ -352,18 +363,15 @@
                                 </a>
                             </div>
                             <div class="widget-short_desc">
-                                <p>Kompaniyamiz 20 yillik tajriba va malakaga ega bo'lib, yuqori sifatli Polietilen
-                                    plyonka ishlab chiqarish sohasida taniqliroq bo'lib kelmoqda. Bizning maqsadimiz
-                                    mijozlarimizga qulay va innovatsion mahsulotlar taqdim etishdir.
+                                <p>{% blocktrans %}Kompaniyamiz 20 yillik tajriba va malakaga ega bo'lib, yuqori sifatli Polietilen plyonka ishlab chiqarish sohasida taniqliroq bo'lib kelmoqda. Bizning maqsadimiz mijozlarimizga qulay va innovatsion mahsulotlar taqdim etishdir.{% endblocktrans %}
 
                                 </p>
                             </div>
                             <div class="widgets-essential_stuff">
                                 <ul>
-                                    <li class="uren-address"><span>Manzil:</span> Toshkent Viloyati Zangiota Tumani
-                                        Navqiron MFY, Markaz Shox, pr. 9 ko'chasi, 43-uy
+                                    <li class="uren-address"><span>{% blocktrans %}Manzil:{% endblocktrans %}</span>{% blocktrans %} Toshkent Viloyati Zangiota Tumani Navqiron MFY, Markaz Shox, pr. 9 ko'chasi, 43-uy{% endblocktrans %}
                                     </li>
-                                    <li class="uren-phone"><span>Telefon
+                                    <li class="uren-phone"><span>{% blocktrans %}Telefon{% endblocktrans %}
                                         :</span> <a href="tel://+123123321345">+123 321 345</a>
                                     </li>
                                     <li class="uren-email"><span>Email:</span> <a href="mailto:msplast.uz@gmail.com">msplast.uz@gmail.com</a>
