@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-22 15:04+0500\n"
+"POT-Creation-Date: 2024-01-22 18:41+0500\n"
 "Language: ru\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -58,10 +58,10 @@ msgstr "О нас"
 
 #: templates/about-us.html:64 templates/about-us.html:117
 #: templates/blog-2-column.html:63 templates/blog-2-column.html:115
-#: templates/contact.html:63 templates/contact.html:282 templates/index.html:65
-#: templates/index.html:117 templates/shop-grid-fullwidth.html:76
-#: templates/shop-grid-fullwidth.html:130 templates/single-product.html:66
-#: templates/single-product.html:119
+#: templates/contact.html:63 templates/contact.html:115
+#: templates/contact.html:282 templates/index.html:65 templates/index.html:117
+#: templates/shop-grid-fullwidth.html:76 templates/shop-grid-fullwidth.html:130
+#: templates/single-product.html:66 templates/single-product.html:119
 msgid "Bog'lanish"
 msgstr "Связь"
 
@@ -146,7 +146,7 @@ msgstr "Продукты"
 msgid "Bizning Manzil"
 msgstr "Наши Медиа"
 
-#: templates/about-us.html:397 templates/blog-2-column.html:365
+#: templates/about-us.html:397 templates/blog-2-column.html:362
 #: templates/contact.html:366 templates/index.html:456
 #: templates/shop-grid-fullwidth.html:404 templates/single-product.html:545
 msgid ""
@@ -163,7 +163,7 @@ msgstr ""
 msgid "Manzil:"
 msgstr "Адрес:"
 
-#: templates/about-us.html:403 templates/blog-2-column.html:371
+#: templates/about-us.html:403 templates/blog-2-column.html:368
 #: templates/contact.html:304 templates/single-product.html:552
 msgid ""
 "Toshkent Viloyati Zangiota Tumani Navqiron MFY, Markaz Shox, pr. 9 ko'chasi, "
@@ -172,7 +172,7 @@ msgstr ""
 "Навкирский МФЦ Зангиатинского района Ташкентской области, Центр Шох, пр. 9 "
 "улица, дом 43."
 
-#: templates/about-us.html:405 templates/blog-2-column.html:373
+#: templates/about-us.html:405 templates/blog-2-column.html:370
 #: templates/contact.html:374 templates/index.html:465
 #: templates/shop-grid-fullwidth.html:413 templates/single-product.html:554
 msgid "Telefon"
@@ -186,7 +186,7 @@ msgstr "Введите имя носителя"
 msgid "Bizning YouTube videolar"
 msgstr "Наши видео на YouTube"
 
-#: templates/blog-2-column.html:371 templates/index.html:461
+#: templates/blog-2-column.html:368 templates/index.html:461
 #: templates/shop-grid-fullwidth.html:409 templates/single-product.html:552
 msgid "Manzil"
 msgstr "Адрес"
