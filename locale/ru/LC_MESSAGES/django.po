@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-22 21:52+0500\n"
+"POT-Creation-Date: 2024-01-26 02:09+0500\n"
 "Language: ru\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -15,65 +15,68 @@ msgstr "Узбекский"
 msgid "Russian"
 msgstr "Русский"
 
-#: templates/about-us.html:59 templates/about-us.html:111
-#: templates/about-us.html:233 templates/about-us.html:287
-#: templates/blog-2-column.html:58 templates/blog-2-column.html:110
-#: templates/blog-2-column.html:230 templates/blog-2-column.html:285
+#: templates/about-us.html:59 templates/about-us.html:112
+#: templates/about-us.html:241 templates/about-us.html:300
+#: templates/blog-2-column.html:58 templates/blog-2-column.html:111
+#: templates/blog-2-column.html:238 templates/blog-2-column.html:298
 #: templates/contact.html:58 templates/contact.html:110
-#: templates/contact.html:230 templates/contact.html:284
-#: templates/index.html:112 templates/index.html:232
+#: templates/contact.html:230 templates/contact.html:289
+#: templates/index.html:113 templates/index.html:240
 #: templates/shop-grid-fullwidth.html:71 templates/shop-grid-fullwidth.html:123
 #: templates/shop-grid-fullwidth.html:244
-#: templates/shop-grid-fullwidth.html:298 templates/single-product.html:61
-#: templates/single-product.html:113 templates/single-product.html:236
-#: templates/single-product.html:291
+#: templates/shop-grid-fullwidth.html:303 templates/single-product.html:61
+#: templates/single-product.html:113 templates/single-product.html:234
+#: templates/single-product.html:294
 msgid "Bosh Sahifa"
 msgstr "Главная Страница"
 
-#: templates/about-us.html:61 templates/about-us.html:114
-#: templates/about-us.html:172 templates/about-us.html:237
-#: templates/blog-2-column.html:60 templates/blog-2-column.html:112
-#: templates/blog-2-column.html:169 templates/blog-2-column.html:235
+#: templates/about-us.html:61 templates/about-us.html:115
+#: templates/about-us.html:176 templates/about-us.html:245
+#: templates/blog-2-column.html:60 templates/blog-2-column.html:113
+#: templates/blog-2-column.html:173 templates/blog-2-column.html:243
 #: templates/contact.html:112 templates/contact.html:170
-#: templates/contact.html:234 templates/index.html:63 templates/index.html:114
-#: templates/index.html:171 templates/index.html:236
+#: templates/contact.html:234 templates/index.html:63 templates/index.html:115
+#: templates/index.html:175 templates/index.html:244
 #: templates/shop-grid-fullwidth.html:73 templates/shop-grid-fullwidth.html:125
 #: templates/shop-grid-fullwidth.html:184
 #: templates/shop-grid-fullwidth.html:248
-#: templates/shop-grid-fullwidth.html:296 templates/single-product.html:63
-#: templates/single-product.html:115 templates/single-product.html:174
-#: templates/single-product.html:240 templates/single-product.html:289
+#: templates/shop-grid-fullwidth.html:301 templates/single-product.html:63
+#: templates/single-product.html:115 templates/single-product.html:173
+#: templates/single-product.html:238 templates/single-product.html:292
 msgid "Maxsulotlar"
 msgstr "Продукты"
 
-#: templates/about-us.html:63 templates/about-us.html:116
-#: templates/about-us.html:288 templates/blog-2-column.html:62
-#: templates/blog-2-column.html:114 templates/contact.html:62
-#: templates/contact.html:114 templates/index.html:64 templates/index.html:116
-#: templates/index.html:308 templates/index.html:320
+#: templates/about-us.html:63 templates/about-us.html:117
+#: templates/about-us.html:301 templates/blog-2-column.html:62
+#: templates/contact.html:62 templates/contact.html:114 templates/index.html:64
+#: templates/index.html:117 templates/index.html:322 templates/index.html:334
+#: templates/index.html:346 templates/index.html:358 templates/index.html:370
 #: templates/shop-grid-fullwidth.html:75 templates/shop-grid-fullwidth.html:129
 #: templates/single-product.html:65 templates/single-product.html:118
 msgid "Biz Haqimizda"
 msgstr "О нас"
 
-#: templates/about-us.html:64 templates/about-us.html:117
-#: templates/blog-2-column.html:63 templates/blog-2-column.html:115
+#: templates/about-us.html:64 templates/about-us.html:118
+#: templates/about-us.html:250 templates/blog-2-column.html:63
+#: templates/blog-2-column.html:116 templates/blog-2-column.html:248
 #: templates/contact.html:63 templates/contact.html:115
-#: templates/contact.html:282 templates/index.html:65 templates/index.html:117
+#: templates/contact.html:239 templates/contact.html:287
+#: templates/index.html:65 templates/index.html:118 templates/index.html:249
 #: templates/shop-grid-fullwidth.html:76 templates/shop-grid-fullwidth.html:130
-#: templates/single-product.html:66 templates/single-product.html:119
+#: templates/shop-grid-fullwidth.html:253 templates/single-product.html:66
+#: templates/single-product.html:119 templates/single-product.html:243
 msgid "Bog'lanish"
 msgstr "Связь"
 
-#: templates/about-us.html:65 templates/about-us.html:118
-#: templates/about-us.html:242 templates/blog-2-column.html:64
-#: templates/blog-2-column.html:116 templates/blog-2-column.html:240
-#: templates/blog-2-column.html:286 templates/contact.html:64
-#: templates/contact.html:116 templates/contact.html:239
-#: templates/index.html:66 templates/index.html:118 templates/index.html:241
-#: templates/shop-grid-fullwidth.html:77 templates/shop-grid-fullwidth.html:253
+#: templates/about-us.html:65 templates/about-us.html:119
+#: templates/about-us.html:255 templates/blog-2-column.html:64
+#: templates/blog-2-column.html:117 templates/blog-2-column.html:253
+#: templates/blog-2-column.html:299 templates/contact.html:64
+#: templates/contact.html:116 templates/contact.html:244
+#: templates/index.html:66 templates/index.html:119 templates/index.html:254
+#: templates/shop-grid-fullwidth.html:77 templates/shop-grid-fullwidth.html:258
 #: templates/single-product.html:67 templates/single-product.html:120
-#: templates/single-product.html:245
+#: templates/single-product.html:248
 msgid "Media"
 msgstr "Медиа"
 
@@ -81,44 +84,44 @@ msgstr "Медиа"
 msgid "Tillar "
 msgstr "Языки "
 
-#: templates/about-us.html:171 templates/blog-2-column.html:168
-#: templates/contact.html:169 templates/index.html:170
-#: templates/shop-grid-fullwidth.html:183 templates/single-product.html:173
+#: templates/about-us.html:175 templates/blog-2-column.html:172
+#: templates/contact.html:169 templates/index.html:174
+#: templates/shop-grid-fullwidth.html:183 templates/single-product.html:172
 msgid "Bizning"
 msgstr "Наши"
 
-#: templates/about-us.html:189 templates/contact.html:186
-#: templates/shop-grid-fullwidth.html:200 templates/single-product.html:191
+#: templates/about-us.html:194 templates/contact.html:186
+#: templates/shop-grid-fullwidth.html:200 templates/single-product.html:190
 msgid "Maxsulot nomini kiriting..."
 msgstr "Введите название продукта..."
 
-#: templates/about-us.html:191 templates/blog-2-column.html:188
-#: templates/index.html:190 templates/shop-grid-fullwidth.html:202
-#: templates/single-product.html:193
+#: templates/about-us.html:196 templates/blog-2-column.html:193
+#: templates/index.html:195 templates/shop-grid-fullwidth.html:202
+#: templates/single-product.html:192
 msgid "Qidirish"
 msgstr "Поиск"
 
-#: templates/about-us.html:251 templates/blog-2-column.html:74
-#: templates/blog-2-column.html:249 templates/contact.html:74
-#: templates/contact.html:248 templates/index.html:252
-#: templates/shop-grid-fullwidth.html:262 templates/single-product.html:77
-#: templates/single-product.html:255
+#: templates/about-us.html:264 templates/blog-2-column.html:74
+#: templates/blog-2-column.html:262 templates/contact.html:74
+#: templates/contact.html:253 templates/index.html:265
+#: templates/shop-grid-fullwidth.html:267 templates/single-product.html:77
+#: templates/single-product.html:258
 msgid "Tillar"
 msgstr "Языки"
 
-#: templates/about-us.html:285
-#, fuzzy
-#| msgid "Biz Haqimizda"
+#: templates/about-us.html:298
 msgid "Biz haqimizda"
 msgstr "О нас"
 
-#: templates/about-us.html:308
+#: templates/about-us.html:321
 msgid "Korxonasiga Xush kelibsiz !"
 msgstr "Добро пожаловать на предприятие !"
 
-#: templates/about-us.html:309
+#: templates/about-us.html:322
+
 msgid ""
-"Biz mahsulotlarimiz va xizmatlarimiz orqali mijozlarimizga samarali\n"
+"Biz mahsulotlarimiz va xizmatlarimiz orqali mijozlarimizga\n"
+"                            samarali\n"
 "                            yechimlar taqdim etish, kompaniya boshqaruvini "
 "rivojlantirish va xizmat sifatini oshirishni\n"
 "                            maqsad qilamiz. Hamkorlarimiz bilan hamkorlikda, "
@@ -134,21 +137,149 @@ msgstr ""
 "сообществепривнося возможности в общество, новый мы стараемся добиться "
 "успеха.. "
 
-#: templates/about-us.html:315
+#: templates/about-us.html:329
 #, fuzzy
 #| msgid "Maxsulotlar"
 msgid "Maxsulotlarimiz"
 msgstr "Продукты"
 
-#: templates/about-us.html:378
+#: templates/about-us.html:392
 #, fuzzy
 #| msgid "Bizning Media"
 msgid "Bizning Manzil"
 msgstr "Наши Медиа"
 
-#: templates/about-us.html:397 templates/blog-2-column.html:362
-#: templates/contact.html:366 templates/index.html:456
-#: templates/shop-grid-fullwidth.html:404 templates/single-product.html:545
+#: templates/about-us.html:411
+msgid ""
+"Kompaniyamiz 20 yillik tajriba va malakaga ega bo'lib, yuqori sifatli\n"
+"                                    Polietilen plyonka ishlab chiqarish "
+"sohasida taniqliroq bo'lib kelmoqda. Bizning\n"
+"                                    maqsadimiz mijozlarimizga qulay va "
+"innovatsion mahsulotlar taqdim\n"
+"                                    etishdir."
+msgstr ""
+"Наша компания имеет 20-летний опыт и квалификацию, высокое качество "
+"Полиэтиленовая пленка становится все более известной в сфере производства. "
+"Наша цель-предоставить нашим клиентам удобные и инновационные продукты."
+
+#: templates/about-us.html:420 templates/contact.html:377
+msgid "Manzil:"
+msgstr "Адрес:"
+
+#: templates/about-us.html:421
+msgid ""
+"Toshkent Viloyati Zangiota Tumani Navqiron MFY, Markaz Shox, pr.\n"
+"                                            9 ko'chasi, 43-uy"
+msgstr ""
+"Навкирский МФЦ Зангиатинского района Ташкентской области, Центр Шох, пр. 9 "
+"улица, дом 43."
+
+#: templates/about-us.html:424 templates/blog-2-column.html:388
+#: templates/contact.html:379 templates/index.html:516
+#: templates/shop-grid-fullwidth.html:418 templates/single-product.html:545
+msgid "Telefon"
+msgstr "Телефон"
+
+#: templates/blog-2-column.html:115
+msgid "BizHaqimizda"
+msgstr "О нас"
+
+#: templates/blog-2-column.html:191
+msgid "Media nomini kiriting"
+msgstr "Введите имя носителя"
+
+#: templates/blog-2-column.html:296
+msgid "Bizning YouTube videolar"
+msgstr "Наши видео на YouTube"
+
+#: templates/blog-2-column.html:375
+msgid ""
+"Kompaniyamiz 20 yillik tajriba va malakaga ega bo'lib, yuqori\n"
+"                                        sifatli Polietilen plyonka ishlab "
+"chiqarish sohasida taniqliroq bo'lib kelmoqda.\n"
+"                                        Bizning maqsadimiz mijozlarimizga "
+"qulay va innovatsion mahsulotlar taqdim\n"
+"                                        etishdir."
+msgstr ""
+"Наша компания имеет 20-летний опыт и квалификацию, высокое качество "
+"Полиэтиленовая пленка становится все более известной в сфере производства. "
+"Наша цель-предоставить нашим клиентам удобные и инновационные продукты."
+
+#: templates/blog-2-column.html:384 templates/index.html:511
+#: templates/shop-grid-fullwidth.html:414 templates/single-product.html:543
+msgid "Manzil"
+msgstr "Адрес"
+
+#: templates/blog-2-column.html:385
+msgid ""
+"Toshkent Viloyati Zangiota Tumani Navqiron MFY, Markaz Shox,\n"
+"                                                pr. 9 ko'chasi, 43-uy"
+msgstr ""
+"Навкирский МФЦ Зангиатинского района Ташкентской области, Центр Шох, пр. 9 "
+"улица, дом 43."
+
+#: templates/contact.html:60 templates/single-product.html:295
+msgid "Maxsulot"
+msgstr "Продукт"
+
+#: templates/contact.html:290
+msgid "Kontakt"
+msgstr "Контакт"
+
+#: templates/contact.html:305
+msgid "Biz bilan bog'lanish"
+msgstr "Связаться с нами"
+
+#: templates/contact.html:306
+msgid ""
+"Biz eng yuqori sifatli va bardoshli plyonkalar yaratish uchun ishtiyoq bilan "
+"ishlaymiz."
+msgstr ""
+"Мы с энтузиазмом работаем над созданием пленок высочайшего качества и "
+"долговечности."
+
+#: templates/contact.html:308
+msgid "Manzilimiz"
+msgstr "Наш адрес"
+
+#: templates/contact.html:309 templates/single-product.html:543
+msgid ""
+"Toshkent Viloyati Zangiota Tumani Navqiron MFY, Markaz Shox, pr. 9 ko'chasi, "
+"43-uy"
+msgstr ""
+"Навкирский МФЦ Зангиатинского района Ташкентской области, Центр Шох, пр. 9 "
+"улица, дом 43."
+
+#: templates/contact.html:312
+msgid "Telefon raqam"
+msgstr "Номер телефона"
+
+#: templates/contact.html:317
+msgid "Email"
+msgstr "Email"
+
+#: templates/contact.html:325
+msgid "Bizga O'z Xabaringizni Yuboring"
+msgstr "Отправьте Нам Свое Сообщение"
+
+#: templates/contact.html:330
+msgid "Ismingiz "
+msgstr "Ваше имя "
+
+#: templates/contact.html:334
+msgid "Telefon Raqamingiz "
+msgstr "Ваш Номер Телефона "
+
+#: templates/contact.html:338
+msgid "Sizning Xabaringiz"
+msgstr "Ваше Сообщение"
+
+#: templates/contact.html:343
+msgid "yuborish"
+msgstr "отправить"
+
+#: templates/contact.html:371 templates/index.html:506
+#: templates/shop-grid-fullwidth.html:409 templates/single-product.html:536
 msgid ""
 "Kompaniyamiz 20 yillik tajriba va malakaga ega bo'lib, yuqori sifatli "
 "Polietilen plyonka ishlab chiqarish sohasida taniqliroq bo'lib kelmoqda. "
@@ -159,92 +290,8 @@ msgstr ""
 "Полиэтиленовая пленка становится все более известной в сфере производства. "
 "Наша цель-предоставить нашим клиентам удобные и инновационные продукты."
 
-#: templates/about-us.html:403 templates/contact.html:372
-msgid "Manzil:"
-msgstr "Адрес:"
-
-#: templates/about-us.html:403 templates/blog-2-column.html:368
-#: templates/contact.html:304 templates/single-product.html:552
-msgid ""
-"Toshkent Viloyati Zangiota Tumani Navqiron MFY, Markaz Shox, pr. 9 ko'chasi, "
-"43-uy"
-msgstr ""
-"Навкирский МФЦ Зангиатинского района Ташкентской области, Центр Шох, пр. 9 "
-"улица, дом 43."
-
-#: templates/about-us.html:405 templates/blog-2-column.html:370
-#: templates/contact.html:374 templates/index.html:465
-#: templates/shop-grid-fullwidth.html:413 templates/single-product.html:554
-msgid "Telefon"
-msgstr "Телефон"
-
-#: templates/blog-2-column.html:186
-msgid "Media nomini kiriting"
-msgstr "Введите имя носителя"
-
-#: templates/blog-2-column.html:283
-msgid "Bizning YouTube videolar"
-msgstr "Наши видео на YouTube"
-
-#: templates/blog-2-column.html:368 templates/index.html:461
-#: templates/shop-grid-fullwidth.html:409 templates/single-product.html:552
-msgid "Manzil"
-msgstr "Адрес"
-
-#: templates/contact.html:60 templates/single-product.html:292
-msgid "Maxsulot"
-msgstr "Продукт"
-
-#: templates/contact.html:285
-msgid "Kontakt"
-msgstr "Контакт"
-
-#: templates/contact.html:300
-msgid "Biz bilan bog'lanish"
-msgstr "Связаться с нами"
-
-#: templates/contact.html:301
-msgid ""
-"Biz eng yuqori sifatli va bardoshli plyonkalar yaratish uchun ishtiyoq bilan "
-"ishlaymiz."
-msgstr ""
-"Мы с энтузиазмом работаем над созданием пленок высочайшего качества и "
-"долговечности."
-
-#: templates/contact.html:303
-msgid "Manzilimiz"
-msgstr "Наш адрес"
-
-#: templates/contact.html:307
-msgid "Telefon raqam"
-msgstr "Номер телефона"
-
-#: templates/contact.html:312
-msgid "Email"
-msgstr "Email"
-
-#: templates/contact.html:320
-msgid "Bizga O'z Xabaringizni Yuboring"
-msgstr "Отправьте Нам Свое Сообщение"
-
-#: templates/contact.html:325
-msgid "Ismingiz "
-msgstr "Ваше имя "
-
-#: templates/contact.html:329
-msgid "Telefon Raqamingiz "
-msgstr "Ваш Номер Телефона "
-
-#: templates/contact.html:333
-msgid "Sizning Xabaringiz"
-msgstr "Ваше Сообщение"
-
-#: templates/contact.html:338
-msgid "yuborish"
-msgstr "отправить"
-
-#: templates/contact.html:372 templates/index.html:461
-#: templates/shop-grid-fullwidth.html:409
+#: templates/contact.html:377 templates/index.html:512
+#: templates/shop-grid-fullwidth.html:414
 msgid ""
 " Toshkent Viloyati Zangiota Tumani Navqiron MFY, Markaz Shox, pr. 9 "
 "ko'chasi, 43-uy"
@@ -260,31 +307,109 @@ msgstr "Главная Страница "
 msgid " Tillar "
 msgstr "Языки"
 
-#: templates/index.html:188
+#: templates/index.html:193
 msgid "Maxsulot nomini kiriting"
 msgstr "Введите название продукта"
 
-#: templates/index.html:304 templates/index.html:316
-msgid "MSPlast Jamoasi"
+#: templates/index.html:317 templates/index.html:330 templates/index.html:340
+#: templates/index.html:364
+#, fuzzy
+#| msgid "MSPlast Jamoasi"
+msgid "MSPlast"
 msgstr "Команда MSPlast"
 
-#: templates/index.html:305 templates/index.html:337
+#: templates/index.html:318
+#, fuzzy
+#| msgid "Plenkalar"
+msgid "Pleyonkalar"
+msgstr "Пленки"
+
+#: templates/index.html:319
+msgid "Mustahkam va "
+msgstr "Прочный и "
+
+#: templates/index.html:319
+msgid ""
+"Hamyonbop\n"
+"                                    narx"
+msgstr "Доступный цена"
+
+#: templates/index.html:331
+#, fuzzy
+#| msgid "Skochlar"
+msgid "Skochlar "
+msgstr "Скоч"
+
+#: templates/index.html:332
+msgid "Turli o'lchamdagi sifatli va arzon skochlar faqat bizda"
+msgstr "Качественные и недорогие scocch разных размеров есть только у нас"
+
+#: templates/index.html:341
+#, fuzzy
+#| msgid "Skochlar"
+msgid "Strechlar"
+msgstr "Скоч"
+
+#: templates/index.html:342
+msgid "O'zbekistonda ko'p yillik ishlab chiqarish va"
+msgstr "Многолетнее производство в Узбекистане и"
+
+#: templates/index.html:343
+msgid ""
+" sifatli maxsulot yetkazib berish bo'yicha yetakchi\n"
+"                                        o'rindamiz"
+msgstr "лидер по поставкам качественной продукции  на месте"
+
+#: templates/index.html:352
+msgid "MSplast"
+msgstr "MSplast"
+
+#: templates/index.html:353
+#, fuzzy
+#| msgid "PP Lentalar"
+msgid "Pp lenta"
+msgstr "Полипропиленовые ленты"
+
+#: templates/index.html:354
+msgid ""
+"PP qadoqlash lentasi (polyester lenta) har xil turdagi tovarlar\n"
+"                                    va "
+msgstr ""
+"Полипропиленовая упаковочная лента (полиэфирная лента) различные виды "
+"товаров и "
+
+#: templates/index.html:355
+msgid ""
+"yuklarni qadoqlash (bog'lash) uchun\n"
+"                                    zamonaviy qadoqlash materialidir"
+msgstr "для упаковки (связывания) груза  современный упаковочный материал"
+
+#: templates/index.html:365
+#, fuzzy
+#| msgid "PP Lentalar"
+msgid "Pet lenta"
+msgstr "Полипропиленовые ленты"
+
+#: templates/index.html:366
+msgid ""
+"PET qadoqlash lentasi kengligi 10 mm dan 25 mm gacha\n"
+"                                    va "
+msgstr "ПЭТ-упаковочная лента шириной от 10 мм до 25 мм и "
+
+#: templates/index.html:367
+msgid ""
+"qalinligi 0,55 mm dan 1,5 mm gacha\n"
+"                                    bo'lgan turli o'lchamlarda ishlab "
+"chiqariladi."
+msgstr ""
+"толщина от 0,55 мм до 1,5 мм которые работают в разных размерах будет "
+"выпущен."
+
+#: templates/index.html:387
 msgid "Plenkalar"
 msgstr "Пленки"
 
-#: templates/index.html:306
-msgid "Chiroyli dizayn va "
-msgstr "Красивый дизайн и "
-
-#: templates/index.html:306
-msgid "Hamyonbop narx"
-msgstr "Доступная цена"
-
-#: templates/index.html:317
-msgid "Shu Yerga Matn kerak"
-msgstr "Здесь нужен текст"
-
-#: templates/index.html:338
+#: templates/index.html:388
 msgid ""
 "Polietilen Plenka eng keng tarqalgan polimer materiallardan biridir, Ko'proq "
 "bilish uchun..."
@@ -292,16 +417,16 @@ msgstr ""
 "Полиэтиленовая пленка-один из самых распространенных полимерных материалов, "
 "более чтобы знать..."
 
-#: templates/index.html:340 templates/index.html:352 templates/index.html:374
-#: templates/index.html:388
+#: templates/index.html:390 templates/index.html:402 templates/index.html:424
+#: templates/index.html:438
 msgid "Ko'rish"
 msgstr "Видение"
 
-#: templates/index.html:349
+#: templates/index.html:399
 msgid "PET Lentalar"
 msgstr "ПЭТ ленты"
 
-#: templates/index.html:350
+#: templates/index.html:400
 msgid ""
 "Polyester lenta (PET): Bu sovuqqa chidamli qadoqlash lentasi bo'lib, u "
 "ko'proq elastiklik va yuk ko'tarish qobiliyati (har bir rulon uchun 1200 kg "
@@ -311,11 +436,11 @@ msgstr ""
 "большей эластичностью и несущей способностью (до 1200 кг на рулон) по "
 "сравнению с металлической лентой."
 
-#: templates/index.html:371
+#: templates/index.html:421
 msgid "PP Lentalar"
 msgstr "Полипропиленовые ленты"
 
-#: templates/index.html:372
+#: templates/index.html:422
 #, python-format
 msgid ""
 "PP qadoqlash lentasi (polipropilen lenta) 100%% toza polipropilendan "
@@ -326,19 +451,19 @@ msgstr ""
 "100%% чистого полипропилена, отвечает самым высоким требованиям и имеет "
 "следующие показатели качества: - Высокая прочность"
 
-#: templates/index.html:385
+#: templates/index.html:435
 msgid "Skochlar"
 msgstr "Скоч"
 
-#: templates/index.html:386
+#: templates/index.html:436
 msgid "Har qanday turdagi va uzunlikdagi skochlarni bizdan topasiz..."
 msgstr "У нас вы найдете косы любого типа и длины..."
 
-#: templates/index.html:403
+#: templates/index.html:453
 msgid "Bizning Media"
 msgstr "Наши Медиа"
 
-#: templates/index.html:404
+#: templates/index.html:454
 msgid "YouTubedan Videolar"
 msgstr "Видео С YouTube"
 
@@ -346,47 +471,47 @@ msgstr "Видео С YouTube"
 msgid "Media "
 msgstr "Медиа"
 
-#: templates/shop-grid-fullwidth.html:299
+#: templates/shop-grid-fullwidth.html:304
 msgid "Barcha Maxsulotlar"
 msgstr "Все Продукты"
 
-#: templates/shop-grid-fullwidth.html:315
+#: templates/shop-grid-fullwidth.html:320
 msgid "Maxsulot Turlari"
 msgstr "Типы Продуктов"
 
-#: templates/single-product.html:346
+#: templates/single-product.html:349
 msgid "Kategoriya"
 msgstr "Категории"
 
-#: templates/single-product.html:349
+#: templates/single-product.html:352
 msgid "Turi"
 msgstr "Тип"
 
-#: templates/single-product.html:351
+#: templates/single-product.html:354
 msgid "Og'irligi"
 msgstr "Вес"
 
-#: templates/single-product.html:353
+#: templates/single-product.html:356
 msgid "O'lchami"
 msgstr "Размер"
 
-#: templates/single-product.html:355
+#: templates/single-product.html:358
 msgid "Sana"
 msgstr "Дата"
 
-#: templates/single-product.html:360 templates/single-product.html:504
+#: templates/single-product.html:363 templates/single-product.html:495
 msgid "Barcha Mahsulotlar"
 msgstr "Все Продукты"
 
-#: templates/single-product.html:364
+#: templates/single-product.html:367
 msgid "Ranglar"
 msgstr "Цвета"
 
-#: templates/single-product.html:419
+#: templates/single-product.html:410
 msgid "Maxsulot Haqida"
 msgstr "О Продукте"
 
-#: templates/single-product.html:476
+#: templates/single-product.html:467
 msgid "Shunga O'xshash Maxsulotlar"
 msgstr "Похожие Продукты"
 

@@ -33,7 +33,6 @@ class Category(models.Model):
 
 class Color(models.Model):
     name = models.CharField(max_length=128)
-    code = models.CharField(max_length=80, unique=True)
     created_at = models.DateTimeField(auto_now=True)
 
     class Meta:
