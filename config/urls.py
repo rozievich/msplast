@@ -13,6 +13,3 @@ urlpatterns = [
     path('', include('main.urls'))
 
 )
-if DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS) \
-                   + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
