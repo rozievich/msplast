@@ -1,0 +1,34 @@
+
+name: MSPlast
+
+on:
+  push:
+    branches: [ "master" ]
+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Deploy to server
+        uses: appleboy/ssh-action@master # An action made to control Linux servers
+        with: # We set all our secrets here for the action, these won't be shown in the action logs 
+          host: 5.182.26.73
+          username: root
+          password: gC5aP8zV7woX
+          script: |
+            cd /var/www/msplast
+            git pull
+            source venv/bin/activate
+            pip install --upgrade -r requirements.txt
+            sudo systemctl restart msplast.service
+            sudo systemctl restart nginx
