@@ -55,12 +55,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'app_db',
-        'USER': 'app_user',
-        'PASSWORD': 'secret_password',
-        'HOST': 'localhost',
-        'PORT': '5432',
-     }
+        'NAME': 'msplast_db',
+        'USER': 'postgres',
+        'PASSWORD': 'black0613',
+        'HOST': '127.0.0.1',
+        'PORT': 5432
+    }
 }
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -85,7 +85,6 @@ TIME_ZONE = 'Asia/Tashkent'
 USE_I18N = True
 
 USE_TZ = True
-
 
 from django.utils.translation import gettext_lazy as _
 
