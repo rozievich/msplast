@@ -726,6 +726,11 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
     height: 100%;
 }
 
+.neon-text {
+    color: neon; /* yoki tanlangan neon rangi */
+    text-shadow: 0 0 10px neon, 0 0 20px neon, 0 0 30px neon; /* text ga nechta effekt qo'shmoqchi bo'lsangiz */
+}
+
 .price-filter .ui-slider-handle {
     border: 2px solid #ffc400;
     display: block;
